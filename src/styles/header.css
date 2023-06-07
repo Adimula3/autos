@@ -1,0 +1,82 @@
+
+.hedaer-contact {
+    padding: 50px 150px 50px 150px;
+}
+.hedaer-contact .welcome {
+    font-family: 'Nunito', sans-serif;
+    color: #8d9ba8;
+}
+.header-socials {
+    padding-left: 300px;
+    padding-right: 50px;
+}
+.header-socials .fa-brands {
+    font-size: 23px;
+    padding-right: 15px;
+    color: #8d9ba8;
+}
+
+.header-socials .fa-whatsapp:hover {
+    color: #25D366;
+}
+.header-socials .fa-instagram:hover {
+    color: #C13584;
+    
+}
+.header-socials .fa-facebook-f:hover {
+    color:#1877F2;
+}
+.header-socials .fa-twitter:hover {
+    color: #1DA1F2;
+}
+.hedaer-contact .btn {
+    margin-right: 30px;
+    background: rgb(60,152,36);
+background: radial-gradient(circle, rgba(60,152,36,1) 70%, rgba(40,136,50,1) 100%);
+    font-family: 'Nunito', sans-serif;
+    border: 1px solid #1d4c2e;
+    padding: 10px 40px 10px 40px;
+}
+.header-info {
+    padding: 0 150px 50px 10px;
+    justify-content: space-evenly;
+}
+.header-info .h-infos {
+    color: #8d9ba8;
+}
+.header-info .h-infos span {
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 14px;
+    color: #8d9ba8;
+    font-family: 'Nunito', sans-serif;
+}
+.header-info .h-infos h4 {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+}
+.header-info .h-infos .fa-solid {
+    font-size: 20px;
+}
+.header-info .fa-envelope {
+    font-size: 40px;
+    margin-right: 10px;
+}
+.header-info h2 {
+    font-family: 'Nunito', sans-serif;
+}
+.header .navbar {
+    padding-left: 120px;
+    background: #24262b;
+}
+.header .navbar .navbar-nav {
+    gap: 80px;
+}
+.header .navbar .nav-link {
+    color: #8d9ba8;
+}
+.header .navbar .nav-link:hover {
+    color: #ffff;
+    background: #2d3035;
+}

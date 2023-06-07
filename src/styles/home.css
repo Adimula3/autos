@@ -1,0 +1,291 @@
+
+.section-title {
+    text-align: center;
+    font-size: 50px;
+}
+/*.....Carousel............*/
+.carousel {
+    height: 70%;
+}
+.carousel-content-left {
+   position: absolute;
+   top: 300px;
+   left: 180px;
+   width: 500px;
+}
+.carousel-content-left h5 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+.carousel-content-left h2 {
+    color: #fff;
+    font-size: 50px;
+    line-height: 65px;
+}
+.carousel-content-left p {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 200;
+    margin-bottom: 50px;
+}
+.carousel-content-left span {
+    color: #fff;
+
+}
+.carousel-content-right {
+    position: absolute;
+    top: 350px;
+    right: 130px;
+    width: 500px;
+ }
+ .carousel-content-right h5 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+.carousel-content-right h2 {
+    color: #fff;
+    font-size: 50px;
+    line-height: 65px;
+}
+.carousel-content-right p {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 200;
+    margin-bottom: 50px;
+}
+.carousel-content-right span {
+    color: #fff;
+
+}
+.carousel-price {
+    background: rgb(60,152,36);
+    background: radial-gradient(circle, rgba(60,152,36,1) 70%, rgba(40,136,50,1) 100%);
+    padding: 20px;
+    font-size: 20px;
+}
+.carousel-test-drive {
+    background: #fff;
+    padding: 20px;
+    font-size: 20px;
+    color: #101010!important;
+}
+.carousel-item img {
+    height: 50%;
+    animation: zoomOut 25s;
+}
+@keyframes zoomOut {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+/*.....General-vehicle-information............*/
+
+.general-vehicle-information {
+    margin: 50px 100px 0 100px;
+    justify-content: space-evenly;
+    background: #1c1e22;
+    padding: 50px 0 70px 0;
+    
+}
+.general-vehicle-information p {
+    font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+    color: #8d9ba8;
+    
+}
+.general-vehicle-information .dropdown .dropdown-toggle {
+    background: #fff;
+    color: #101010;
+    border: 1px solid #fff;
+    width: 250px;
+    text-align: left;
+    font-size: 12px;
+    padding: 8px;
+    font-family: 'Nunito', sans-serif;
+}
+.general-vehicle-information .dropdown .dropdown-toggle::after {
+  content: "";
+  float: right;
+  margin-right: 10px;
+  margin-top: 8px;
+  cursor: pointer;
+} 
+.general-vehicle-information .dropdown .dropdown-toggle .fa-angle-down {
+    color: red!important;
+    margin-right: 10px;
+    transition: 0.5s;
+  }
+  .general-vehicle-information .dropdown-menu {
+    margin-top: 5px;
+    border: 2px solid #fff;
+    width: 250px;
+   
+  }
+  .general-vehicle-information .dropdown-item {
+    border-bottom: 1px solid #f6f6f6;
+    padding: 5px;
+  }
+  .general-vehicle-information .dropdown-item:hover {
+    background: rgb(60,152,36);
+    background: radial-gradient(circle, rgba(60,152,36,1) 70%, rgba(40,136,50,1) 100%);
+    color: #fff;
+  }
+.general-vehicle-information .search-button {
+    margin-top: 38px;
+}
+.general-vehicle-information .search-button .btn {
+    background: rgb(60,152,36);
+    background: radial-gradient(circle, rgba(60,152,36,1) 70%, rgba(40,136,50,1) 100%);
+    font-size: 12px;
+    border: none;
+    padding: 8px 35px 8px 35px;
+}
+
+/*.....Latest-offers............*/
+
+.Latest-offers {
+    padding: 200px 130px 0  130px;
+}
+.Latest-offers {
+    margin: 0 0 100px 0;
+}
+.Latest-offers .section-title {
+    padding-bottom: 50px;
+}
+
+.card {
+    margin-bottom: 20px;
+    cursor: pointer;
+    background: #1c1e22;
+}
+.card-img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.card-images {
+    width: 100%;
+    height: 150px;
+}
+.card .card-vehicle-name {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.card .card-price {
+    text-align: center;
+    background: rgb(60,152,36);
+    background: radial-gradient(circle, rgba(60,152,36,1) 70%, rgba(40,136,50,1) 100%);
+    margin: 50px 0 0 0;
+    padding: 10px;
+    color: #fff;
+}
+.card:hover .card-price {
+    background-color: #101010;
+  }
+ 
+/*.....Testimonials............*/
+
+.Testimonials {
+    padding: 0 400px 0 380px;
+    text-align: center;
+    background: #1c1e22;
+}
+.Testimonials h1 {
+    padding: 100px 0 0 100px;
+}
+.Testimonials span {
+    font-size: 14px;
+    margin-top: 0;
+    padding-top: 0;
+    color: #8d9ba8;
+    margin-left: 80px;
+}
+.Testimonials .carousel {
+    padding: 100px 50px 0 50px;
+    width: 700px;
+    text-align: center;
+}
+
+.Testimonials .carousel .Tc-content {
+   height: 200px;
+}
+.Testimonials .Tc-content h4 {
+    color: #fff;
+}
+.Testimonials .Tc-content p {
+    color: #8d9ba8;
+}
+.Testimonials .carousel-control-prev{
+    display: none;
+}
+.Testimonials .carousel-control-next {
+  display: none;
+} 
+.carousel-indicators {
+    display: none;
+}
+
+/*.....Trusted Agents............*/
+
+.Trusted-dealers {
+    padding: 100px 10px 100px 10px;
+}
+.Trusted-dealers h1 {
+   text-align: center;
+}
+.Trusted-dealers .t-sp1 {
+    text-align: center;
+    margin-left: 520px;
+    color: #8d9ba8;
+}
+.Trusted-dealers .Agents {
+    width: 750px;
+    margin: 100px 0 0 0;
+    background: #1c1e22;
+    padding: 0 0 0 0;
+    height: 250px;
+}
+.Agents img {
+
+}
+.Trusted-dealers .Agents .agent-details {
+    padding: 20px 0 0 35px;
+}
+.agent-details h5 {
+    font-size: 25px;
+}
+.agent-details span {
+    color: #8d9ba8;
+}
+.agent-details p {
+    margin-top: 15px;
+    color: #8d9ba8;
+}
+.agent-socials .fa-brands {
+    font-size: 23px;
+    padding-right: 15px;
+    color: #8d9ba8;
+}
+.agent-socials .fa-whatsapp:hover {
+    color: #25D366;
+}
+.agent-socials .fa-instagram:hover {
+    color: #C13584;
+    
+}
+.agent-socials .fa-facebook-f:hover {
+    color:#1877F2;
+}
+.agent-socials .fa-twitter:hover {
+    color: #1DA1F2;
+}
+.agent-list {
+   gap: 15px;
+}
