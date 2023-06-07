@@ -15,7 +15,7 @@ function Specification(props) {
         VERSION: "1.2",
         FUEL: "PETROL",
         ENGINE: "16000",
-        HORSEPOWER: "300",
+        HORSEPOWER: "400",
         TRANSMISSION: "MANUAL",
         DOORS: "2",
         CONDITION: "NON DRIVER",
