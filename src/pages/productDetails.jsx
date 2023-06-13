@@ -10,8 +10,11 @@ import Feature from "../component/feature";
 import Specification from "../component/specification";
 import Header from "../component/header";
 import Footer from "../component/footer";
+import  {productImages}  from "../data/data";
+import { useParams } from 'react-router-dom';
+import { autoDatas } from "../data/data";
 
-function ProductDetails(props) {
+function ProductDetails() {
 
 
     const [showDescription, setShowDescription] = useState(true);
@@ -21,29 +24,6 @@ function ProductDetails(props) {
     const [currentProductImage, setCurrentProductImage] = useState(0);
     const [lightBox, setLightBox] = useState(false);
 
-
-    const images = [
-        {
-            png: offer5,
-            thumbnail: offer5,
-        },
-        {
-            png: offer2,
-            thumbnail: offer2,
-        },
-        {
-            png: offer3,
-            thumbnail: offer3,
-        },
-        {
-            png: offer4,
-            thumbnail: offer4,
-        },
-        {
-            png: offer1,
-            thumbnail: offer1,
-        },
-      ]
     
   
       const handleDescriptionClick = () => {
@@ -63,7 +43,7 @@ function ProductDetails(props) {
     setShowSpecification(true);
   };
 
-
+  const params = useParams();
   
     return (
         <>
@@ -72,7 +52,8 @@ function ProductDetails(props) {
             </div>
          <div className='product-details'>
             <div className="auto-title">
-               <h2>Volkswagen Atlas 2</h2>
+               <h2>Volkswagen Atlas {params.productId}</h2>
+               <h1></h1>
                <p>Home / Volkswagen Atlas 2</p>
             </div>
          <div className="product-details-content d-flex">
@@ -84,36 +65,36 @@ function ProductDetails(props) {
                 </div>
             </div>
             <div className="product-light-box">
-                <img className="product1" src={images[currentProductImage].png} alt=""onClick={() => setLightBox(true)}/>
+                <img className="product1" src={productImages[currentProductImage].png} alt=""onClick={() => setLightBox(true)}/>
                 <div className="thumbnail d-flex">
                     <div className="thumb">
                       <img className={currentProductImage === 0 ? 'active' :''}
                            onClick={ () => setCurrentProductImage(0)}
-                           src={images[0].thumbnail}
+                           src={productImages[0].thumbnail}
                            alt=""/>
                    </div>
                    <div className="thumb">
                       <img className={currentProductImage === 1 ? 'active' :''}
                            onClick={ () => setCurrentProductImage(1)}
-                           src={images[1].thumbnail}
+                           src={productImages[1].thumbnail}
                            alt=""/>
                    </div>
                    <div className="thumb">
                       <img className={currentProductImage === 2 ? 'active' :''}
                            onClick={ () => setCurrentProductImage(2)}
-                           src={images[2].thumbnail}
+                           src={productImages[2].thumbnail}
                            alt=""/>
                    </div>
                    <div className="thumb">
                       <img className={currentProductImage === 3 ? 'active' :''}
                            onClick={ () => setCurrentProductImage(3)}
-                           src={images[3].thumbnail}
+                           src={productImages[3].thumbnail}
                            alt=""/>
                    </div>
                    <div className="thumb">
                       <img className={currentProductImage === 4 ? 'active' :''}
                            onClick={ () => setCurrentProductImage(4)}
-                           src={images[4].thumbnail}
+                           src={productImages[4].thumbnail}
                            alt=""/>
                    </div>
                 </div>
@@ -141,7 +122,7 @@ function ProductDetails(props) {
             <div className="">
             {showDescription && <Description />}
             {showFeatures && <Feature />}
-            {showSpecification && <Specification />}
+            {showSpecification && <Specification autoDatas={autoDatas} />}
 
             </div>
         </div>

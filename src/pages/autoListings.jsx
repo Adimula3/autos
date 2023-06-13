@@ -1,8 +1,7 @@
 import React, { useState }  from 'react';
-import offer1 from '../assets/car1.jpeg';
 import { Dropdown, Row, Col, Container,DropdownButton  } from 'react-bootstrap';
 import '../styles/autoListings.css';
-import offer11 from '../assets/car1.jpeg';
+import offer1 from '../assets/car1.jpeg';
 import offer2 from '../assets/car2.jpeg';
 import offer3 from '../assets/car3.jpeg';
 import offer4 from '../assets/car4.jpeg';
@@ -13,6 +12,8 @@ import Header from '../component/header';
 import ProductDetails from './productDetails';
 import { Link } from 'react-router-dom';
 import Footer from '../component/footer';
+import { autoDatas } from '../data/data';
+
 
 
 
@@ -49,141 +50,8 @@ function AutoListings(props) {
     }
 
 
-    
-    
 
-  const [listings, setListings] = useState([
-        {
-          src: offer1,
-          alt: "Image 1",
-          title: "Volkswagen Atlas 2",
-          about: "Duis aute reprehender voluptate velit esacium fugiat nula pariatur excepteurd magna aliqua uet enim ad minim veniam quis nostrud ...",
-          autoMake: "Volkswagen",
-          year: "2014",
-          fuel: "plugin electric",
-          transmission: "Manual",
-          autoVersion: "1.3",
-          mileage: "4980",
-          horsePower: "300HP",
-          Drive: "4x4",
-          price: "20 Million",
-          condition: "New",
-         
-        },
-        {
-            src: offer2,
-            alt: "Image 1",
-            title: "Nissan Murano",
-            about: "Duis aute reprehender voluptate velit esacium fugiat nula pariatur excepteurd magna aliqua uet enim ad minim veniam quis nostrud ...",
-            autoMake: "Nissan",
-            year: "2014",
-            fuel: "diesel",
-            transmission: "Manual",
-            autoVersion: "1.3",
-            mileage: "4980",
-            horsePower: "300HP",
-            Drive: "4x4",
-            price: "8 Million",
-            condition: "Used",
-        },
-        {
-            src: offer3,
-            alt: "Image 1",
-            title: "Mazda CX 9 SUV",
-            about: "Duis aute reprehender voluptate velit esacium fugiat nula pariatur excepteurd magna aliqua uet enim ad minim veniam quis nostrud ...",
-            autoMake: "Mazda",
-            year: "2014",
-            fuel: "diesel",
-            transmission: "Manual",
-            autoVersion: "1.3",
-            mileage: "4980",
-            horsePower: "300HP",
-            Drive: "4x4",
-            price: "2 Million",
-            condition: "Tokunbo",
-        },
-        {
-            src: offer4,
-            alt: "Image 1",
-            title: "Renault Koleos",
-            about: "Duis aute reprehender voluptate velit esacium fugiat nula pariatur excepteurd magna aliqua uet enim ad minim veniam quis nostrud ...",
-            autoMake: "Renault",
-            year: "2014",
-            fuel: "petrol",
-            transmission: "Manual",
-            autoVersion: "1.3",
-            mileage: "4980",
-            horsePower: "300HP",
-            Drive: "4x4",
-            price: "15 Million",
-            condition: "Tokunbo",
-        },
-        {
-            src: offer5,
-            alt: "Image 1",
-            title: "Volkswagen Atlas 2",
-            about: "Duis aute reprehender voluptate velit esacium fugiat nula pariatur excepteurd magna aliqua uet enim ad minim veniam quis nostrud ...",
-            autoMake: "Volkswagen",
-            year: "2020",
-            fuel: "petrol",
-            transmission: "Automatic",
-            autoVersion: "1.3",
-            mileage: "4980",
-            horsePower: "300HP",
-            Drive: "4x4",
-            price: "22 Million",
-            condition: "New",
-        },
-        {
-            src: offer6,
-            alt: "Image 1",
-            title: "Audi Q5 3",
-            about: "Duis aute reprehender voluptate velit esacium fugiat nula pariatur excepteurd magna aliqua uet enim ad minim veniam quis nostrud ...",
-            autoMake: "Audi",
-            year: "2020",
-            fuel: "petrol",
-            transmission: "Semi-Automatic",
-            autoVersion: "1.3",
-            mileage: "4980",
-            horsePower: "300HP",
-            Drive: "4x4",
-            price: "6 Million",
-            condition: "Used",
-        },
-        {
-            src: offer7,
-            alt: "Image 1",
-            title: "Audi RS 4 Avant",
-            about: "Duis aute reprehender voluptate velit esacium fugiat nula pariatur excepteurd magna aliqua uet enim ad minim veniam quis nostrud ...",
-            autoMake: "Audi",
-            year: "2020",
-            fuel: "petrol",
-            transmission: "Automatic",
-            autoVersion: "1.3",
-            mileage: "4980",
-            horsePower: "300HP",
-            Drive: "4x4",
-            price: "18 Million",
-            condition: "Tokunbo",
-        },
-        {
-            src: offer7,
-            alt: "Image 1",
-            title: "DS 7 Crossback",
-            about: "Duis aute reprehender voluptate velit esacium fugiat nula pariatur excepteurd magna aliqua uet enim ad minim veniam quis nostrud ...",
-            autoMake: "DS",
-            year: "2010",
-            fuel: "petrol",
-            transmission: "Manual",
-            autoVersion: "1.3",
-            mileage: "4980",
-            horsePower: "300HP",
-            Drive: "4x4",
-            price: "10 Million",
-            condition: "New",
-        },
-        
-      ]);
+  const [listings, setListings] = useState(autoDatas);
 
 
       const filteredListings = selectedYear === "All" ? listings : listings.filter((listing) => listing.year === selectedYear);
@@ -244,7 +112,7 @@ function AutoListings(props) {
                     </div>
                     
                     <div className='auto-spec-details'>
-                        <Link to="/productdetails"><h3>{listing.title}</h3></Link>
+                        <Link to={`/productDetails/${listing.id}`}><h3>{listing.title}</h3></Link>
                         <p className='aut-sp-p'>{listing.about}</p>
                         <div className='aut-sp-d d-flex'>
                             <div className='aut-sp-1'>
@@ -283,7 +151,7 @@ function AutoListings(props) {
                                  <Dropdown.Item onClick={() => handleMakeSelection("Renault")}>Renault</Dropdown.Item>
                                  <Dropdown.Item onClick={() => handleMakeSelection("Mazda")}>Mazda</Dropdown.Item>
                                  <Dropdown.Item onClick={() => handleMakeSelection("Audi")}>Audi</Dropdown.Item>
-                                 <Dropdown.Item onClick={() => handleMakeSelection("DS")} >DS 7</Dropdown.Item>
+                                 <Dropdown.Item onClick={() => handleMakeSelection("DS 7")} >DS 7</Dropdown.Item>
                            </Dropdown.Menu>
                        </Dropdown>
                        <Dropdown>
