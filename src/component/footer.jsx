@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/footer.css';
-function Footer(props) {
+function Footer() {
     return (
         <div className='footer'>
             <div className='footer-content d-flex'>
@@ -24,10 +24,10 @@ function Footer(props) {
             </p>
             <div className='hedaer-contact d-flex'>
                 <div className='footer-socials d-flex'>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-facebook-f"></i>
-                <i class="fa-brands fa-whatsapp"></i>
-                <i class="fa-brands fa-twitter"></i>
+                <i className="fa-brands fa-instagram"></i>
+                <i className="fa-brands fa-facebook-f"></i>
+                <i className="fa-brands fa-whatsapp"></i>
+                <i className="fa-brands fa-twitter"></i>
                 </div>
             </div>
         </div>

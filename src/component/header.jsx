@@ -11,10 +11,10 @@ function Header() {
             <div className='hedaer-contact d-flex'>
                 <p className='welcome'>Welcome to Autodealer Car Service</p>
                 <div className='header-socials d-flex'>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-facebook-f"></i>
-                <i class="fa-brands fa-whatsapp"></i>
-                <i class="fa-brands fa-twitter"></i>
+                <i className="fa-brands fa-instagram"></i>
+                <i className="fa-brands fa-facebook-f"></i>
+                <i className="fa-brands fa-whatsapp"></i>
+                <i className="fa-brands fa-twitter"></i>
                 </div>
                 <button className='btn btn-primary'>Sell Your Car</button>
             </div>
@@ -41,19 +41,19 @@ function Header() {
             </div>
             <nav className="navbar navbar-expand-lg">
                 <div className='container-fluid'>
-                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
+                   <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span className="navbar-toggler-icon"></span>
                    </button>
-                   <div class="collapse navbar-collapse" id="navbarNav">
-                       <ul class="navbar-nav">
-                          <li class="nav-item">
-                             <Link class="nav-link " to="/" aria-current="page">HOME</Link>
+                   <div className="collapse navbar-collapse" id="navbarNav">
+                       <ul className="navbar-nav">
+                          <li className="nav-item">
+                             <Link className="nav-link " to="/" aria-current="page">HOME</Link>
                           </li>
-                          <li class="nav-item">
-                             <Link class="nav-link" to="/listings">AUTO LISTINGS</Link>
+                          <li className="nav-item">
+                             <Link className="nav-link" to="/listings">AUTO LISTINGS</Link>
                           </li>
-                          <li class="nav-item">
-                             <a class="nav-link" href="#">CONTACT US</a>
+                          <li className="nav-item">
+                             <a className="nav-link" href="/">CONTACT US</a>
                           </li>   
                        </ul>
                    </div>

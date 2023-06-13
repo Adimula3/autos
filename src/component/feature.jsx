@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/features.css';
-import Footer from './footer';
-function Feature(props) {
+
+function Feature() {
     return (
         <div>
             <div className='features d-flex'>
