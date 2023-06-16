@@ -23,7 +23,7 @@ function ProductDetails() {
 
     const [currentProductImage, setCurrentProductImage] = useState(0);
     const [lightBox, setLightBox] = useState(false);
-
+    const [activeProductImage, setActiveProductImage] = useState(0);
     
   
       const handleDescriptionClick = () => {
@@ -44,6 +44,20 @@ function ProductDetails() {
   };
 
   const params = useParams();
+
+  const thumbnails = productImages.map((productImage, index) => (
+    <div
+      key={index}
+      className="thumb"
+      onClick={() => {
+        setActiveProductImage(index);
+      }}
+    >
+      <img src={productImage.thumbnail} alt="" />
+    </div>
+  ));
+
+  const productImage = productImages[activeProductImage];
   
     return (
         <>
@@ -65,39 +79,8 @@ function ProductDetails() {
                 </div>
             </div>
             <div className="product-light-box">
-                <img className="product1" src={productImages[currentProductImage].png} alt=""onClick={() => setLightBox(true)}/>
-                <div className="thumbnail d-flex">
-                    <div className="thumb">
-                      <img className={currentProductImage === 0 ? 'active' :''}
-                           onClick={ () => setCurrentProductImage(0)}
-                           src={productImages[0].thumbnail}
-                           alt=""/>
-                   </div>
-                   <div className="thumb">
-                      <img className={currentProductImage === 1 ? 'active' :''}
-                           onClick={ () => setCurrentProductImage(1)}
-                           src={productImages[1].thumbnail}
-                           alt=""/>
-                   </div>
-                   <div className="thumb">
-                      <img className={currentProductImage === 2 ? 'active' :''}
-                           onClick={ () => setCurrentProductImage(2)}
-                           src={productImages[2].thumbnail}
-                           alt=""/>
-                   </div>
-                   <div className="thumb">
-                      <img className={currentProductImage === 3 ? 'active' :''}
-                           onClick={ () => setCurrentProductImage(3)}
-                           src={productImages[3].thumbnail}
-                           alt=""/>
-                   </div>
-                   <div className="thumb">
-                      <img className={currentProductImage === 4 ? 'active' :''}
-                           onClick={ () => setCurrentProductImage(4)}
-                           src={productImages[4].thumbnail}
-                           alt=""/>
-                   </div>
-                </div>
+            <img className="product1" src={productImage.png} alt="" />
+                {thumbnails}
             </div>
            </div>
            <div className="mile-details">
@@ -112,7 +95,7 @@ function ProductDetails() {
                 </div>
             </div>
          </div>
-          
+           
             
             <div className="product-specific-details d-flex">
                 <p onClick={handleDescriptionClick}>DESCRIPTION</p>
@@ -122,7 +105,7 @@ function ProductDetails() {
             <div className="">
             {showDescription && <Description />}
             {showFeatures && <Feature />}
-            {showSpecification && <Specification autoDatas={autoDatas} />}
+            {showSpecification && <Specification autoDatas={autoDatas}/>}
 
             </div>
         </div>

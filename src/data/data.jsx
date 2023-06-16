@@ -37,10 +37,7 @@ import car8 from '../assets/car6.jpeg';
         color: "RED",
         interiorColor: "ORANGE",
         Warranty: "NO",
-        productImage: {
-            
-        }
-       
+        
       },
       {
           id: 2,
