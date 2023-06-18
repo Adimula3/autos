@@ -177,3 +177,95 @@
 .auto-range-sort .price-range, .year-range {
     width: 200px;
 }
+
+/* Mobile View */
+@media only screen and (max-width: 767px) {
+
+    .auto-listings .aut-title {
+        font-size: 25px;
+        margin-left: 0;
+    }
+    .aut-link {
+        font-size: 14px;
+        padding-top: 15px;
+        margin-left: 10px;
+    }
+    .auto-listings-details {
+        padding: 50px 0 0 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .auto-listings-details .autos {
+        padding-left: 10px!important;
+    }
+    .autos-sort {
+        margin-left: 0;
+        padding-left: 0;
+    }    
+    .auto-listings-details .autos {
+        padding-left: 80px;
+    }
+    .autos .show-on-page {
+        display: flex;
+        flex-direction: column!important;
+    }
+    .autos .sort-by {
+        display: flex;
+        flex-direction: column!important;
+    }
+    .auto-sepcifications {
+        padding: 80px 0 0 0;
+        cursor: pointer;
+        width: 920px;
+        display: flex;
+        flex-direction: column;
+    }
+    .auto-spec-details {
+        width: 350px;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .auto-spec-details .aut-sp-p {
+        width: 318px;
+        margin-top: 5px;
+    }
+    .aut-sp-d  {
+        display: flex;
+        flex-direction: column;
+    }
+    .aut-sp-d .aut-sp-1 {
+        margin-right: 30px;
+    }
+    
+    .aut-sp-d .aut-sp-1 p {
+        font-size: 12px;
+        line-height: 10px;
+    }
+    .aut-sp-3 {
+        margin-left: 0;
+    }
+    
+    .aut-sp-d .aut-sp-3 h3 {
+        font-size: 13px;
+        color: #8d9ba8;
+        text-align: left;
+    
+    }
+    
+    .aut-sp-d .aut-sp-3 p {
+        font-size: 20px;
+        padding: 5px 0 5px 0!important;
+        width: 300px;
+        text-align: center;
+    }
+    .auto-range-sort {
+        margin-top: 50px;
+    }
+    .auto-range-sort .dropdown .dropdown-toggle {
+        margin-bottom: 20px;
+        width: 285px;
+    }
+    .auto-range-sort .price-range, .year-range {
+        width: 285px;
+    }
+  }

@@ -4,7 +4,6 @@ function Footer() {
     return (
         <div className='footer'>
             <div className='footer-content d-flex'>
-               
                 <div className='f-c'>
                     <h1>Do you want to sell a car?</h1>
                     <p>Let's get started!</p>
