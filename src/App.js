@@ -1,6 +1,5 @@
-
 import './App.css';
-import Header from './component/header';
+// import Header from './component/header';
 import Home from './pages/home';
 import AutoListings from './pages/autoListings';
 import ProductDetails from './pages/productDetails';

@@ -1,123 +1,150 @@
-
 .auto-listings {
     width: 100%;
     padding: 30px 20px;
     margin: 0;
 }
 
-
 .auto-listings .aut-title {
     font-size: 45px;
+    margin-left: 80px;
 }
+
 .aut-link {
     font-size: 15px;
     padding-top: 20px;
     color: #8d9ba8;
+    margin-left: 80px;
 }
-.auto-listings-details  {
+
+.auto-listings-details {
     padding: 100px 0 0 0;
 }
+
 .autos-sort {
     gap: 30px;
 }
+
 .autos-sort p {
     font-size: 12px;
     padding: 10px 10px 0 0;
     color: #8d9ba8;
 }
-.autos-sort .dropdown  .dropdown-toggle {
+
+.autos-sort .dropdown .dropdown-toggle {
     background: #fff;
     border: none;
     width: 100px;
     color: #101010;
+}
+.auto-listings-details .autos {
+    padding-left: 80px;
 }
 .auto-sepcifications {
     padding: 80px 0 0 0;
     cursor: pointer;
     width: 920px;
 }
+
 .auto-sepcifications .auto-spec-img-box {
     height: 180px;
     width: 300px;
     cursor: pointer;
 }
+
 .auto-sepcifications .auto-spec-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
 }
+
 .auto-spec-details {
     width: 600px;
     margin-left: 20px;
 }
+
 .auto-sepcifications .auto-spec-details h3 {
     font-size: 25px;
     color: #fff;
     text-decoration: none;
 }
+
 .auto-sepcifications .auto-spec-details p {
     font-size: 13px;
     color: #8d9ba8;
 }
+
 .auto-sepcifications .auto-spec-details span {
     color: #8d9ba8;
 }
+
 .auto-spec-details ul {
     list-style-type: none;
 }
+
 .auto-spec-details ul li {
     font-size: 12px;
 }
+
 .auto-spec-details .aut-sp-p {
     width: 500px;
     color: #8d9ba8;
 }
+
 .auto-price p {
     font-size: 40px;
     padding: 100px 0 0 0;
 }
-.aut-sp-d  .aut-sp-1 {
-   margin-right: 30px;
+
+.aut-sp-d .aut-sp-1 {
+    margin-right: 30px;
 }
-.aut-sp-d  .aut-sp-1 p {
+
+.aut-sp-d .aut-sp-1 p {
     font-size: 12px;
     line-height: 10px;
 }
-.aut-sp-d  .aut-sp-2 p {
+
+.aut-sp-d .aut-sp-2 p {
     font-size: 12px;
     line-height: 10px;
 }
+
 .aut-sp-3 {
     margin-left: 80px;
 }
+
 .aut-sp-d .aut-sp-3 h3 {
     font-size: 15px;
     color: #8d9ba8;
     text-align: left;
-   
+
 }
-.aut-sp-d  .aut-sp-3 p {
+
+.aut-sp-d .aut-sp-3 p {
     font-size: 25px;
-    background: rgb(60,152,36);
-    background: radial-gradient(circle, rgba(60,152,36,1) 70%, rgba(40,136,50,1) 100%);
+    background: rgb(60, 152, 36);
+    background: radial-gradient(circle, rgba(60, 152, 36, 1) 70%, rgba(40, 136, 50, 1) 100%);
     color: #fff;
     padding: 5px 20px 5px 20px;
     border-radius: 5px;
 }
+
 .auto-range-sort {
     background: #1c1e22;
     padding: 30px;
     height: 700px;
-    box-shadow: -2px -1px 12px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: -2px -1px 12px 0px rgba(0,0,0,0.75);
--moz-box-shadow: -2px -1px 12px 0px rgba(0,0,0,0.75);
-border-radius: 5px;
+    box-shadow: -2px -1px 12px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px -1px 12px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px -1px 12px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
 }
+
 .auto-range-sort h4 {
     color: #8d9ba8;
     padding-bottom: 20px;
 }
+
 .auto-range-sort .dropdown .dropdown-toggle {
     background: #fff;
     color: #101010;
@@ -128,19 +155,25 @@ border-radius: 5px;
     padding: 8px;
     margin-bottom: 20px;
 }
+
 .auto-range-sort .form-label {
     font-size: 15px;
     color: #8d9ba8;
 }
+
 .auto-range-sort h5 {
     font-size: 15px;
     margin-top: 20px;
     color: #8d9ba8;
 }
+
 .auto-range-sort .dropdown .dropdown-toggle::after {
     content: "";
     float: right;
     margin-right: 10px;
     margin-top: 8px;
     cursor: pointer;
-  } 
+}
+.auto-range-sort .price-range, .year-range {
+    width: 200px;
+}

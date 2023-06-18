@@ -29,6 +29,7 @@
     background: rgb(60,152,36);
     background: radial-gradient(circle, rgba(60,152,36,1) 70%, rgba(40,136,50,1) 100%);
     padding: 5px 20px 5px 20px;
+    border-radius: 8px;
 }
 .auto-info .description-details p {
     padding-top: 20px;
@@ -38,6 +39,7 @@
     width: 750px;
     height: 445px;
     margin-left: 100px;
+    border-radius: 8px;
 }
 .thumbnail {
     margin-left: 100px;
@@ -50,11 +52,20 @@
 .thumbnail .thumb {
     height: 100px;
     width: 100px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    opacity: 0.3;
+    border-radius: 10px;
+}
+
+.thumbnail .thumb.active {
+    opacity: 1;
 }
 .thumb img {  
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
 }
 .product-specific-details {
     gap: 30px;
@@ -77,6 +88,9 @@
 }
 .mile-details {
     margin-left: 100px;
+    background: #1c1e22;
+    padding: 30px 5px 30px 5px; 
+    border-radius: 5px;
 
 }
 .mile-details .m-t-f-box {
@@ -89,5 +103,94 @@
 -moz-box-shadow: -2px -1px 12px 0px rgba(0,0,0,0.75);
 }
 .product-specific-details p {
+    cursor: pointer;
+}
+.mile-details .m-p {
+    color: #8d9ba8;
+    text-align: left;
+}
+.mile-details .seller-details {
+    margin-top: 60px;
+}
+.seller-details .seller-img {
+    border-radius: 8px;
+    height: 150px;
+    width: 150px;
+}
+.seller-details .agent-name {
+    color: #8d9ba8;
+    font-weight: 700;
+}
+.seller-details .seller p {
+    margin: 30px 0 0 10px;
+}
+.seller-details .agent-socials {
+    margin: 30px 0 0 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.mile-details{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mile-details .call-details {
+    margin: 50px 0 0 50px
+}
+.mile-details .fa-phone {
+    background: #d75448;
+    font-size: 28px;
+    padding: 10px 15px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.mile-details .phone {
+    background: #ef5d50;
+    font-size: 18px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 250px;
+    height: 48px;
+    padding: 10px 0 0 0;
+    text-align: center;
+}
+.mile-details .fa-whatsapp {
+    background: #168567;
+    font-size: 30px;
+    padding: 10px 15px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.mile-details .whatsapp {
+    background: #199473;
+
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 18px;
+    width: 250px;
+    height: 50px;
+    padding: 10px 0 0 0;
+    text-align: center;
+}
+.mile-details .fa-envelope {
+    background: #3b7db5;
+    font-size: 30px;
+    padding: 10px 15px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.mile-details .mail {
+    background: #428bca;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 18px;
+    width: 250px;
+    height: 50px;
+    padding: 10px 0 0 0;
+    text-align: center;
+}
+.call-details .c-details {
     cursor: pointer;
 }
