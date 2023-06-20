@@ -71,6 +71,11 @@ function AutoListings() {
       );
 
   const displayedListings = fuelTypeFilteredListings.slice(0, displayCount);
+   
+  const [isAutoRangeSortVisible, setAutoRangeSortVisible] = useState(true);
+  const handleIconClick = () => {
+    setAutoRangeSortVisible(!isAutoRangeSortVisible);
+  };
 
   return (
     <div>
@@ -128,6 +133,9 @@ function AutoListings() {
                   </Dropdown.Menu>
                 </Dropdown>
               </div>
+              <div>
+                <i class="fa-solid fa-list"  onClick={handleIconClick}></i>
+              </div>
             </div>
             {displayedListings.map((listing, index) => (
               <div className="auto-sepcifications d-flex">
@@ -178,6 +186,7 @@ function AutoListings() {
               </div>
             ))}
           </div>
+          {isAutoRangeSortVisible && (
           <div className="auto-range-sort">
             <h4>BY MAKE</h4>
             <Dropdown>
@@ -325,6 +334,8 @@ function AutoListings() {
               </Dropdown.Menu>
             </Dropdown>
           </div>
+          )
+          }
         </div>
       </div>
 

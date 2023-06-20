@@ -28,3 +28,21 @@
 .description .icon {
     color: #8d9ba8;
 }
+/* Mobile View */
+@media only screen and (max-width: 767px) {
+    .description {
+        padding: 30px 0 0 10px;
+        width: 375px;
+    }
+    .description .accordion-header {
+        padding:15px 0 15px 15px;
+        font-size: 15px;
+    }
+    .description .accordion-body {
+        font-size: 14px;
+    }
+    .description p {
+       font-size: 14px;
+    }
+  }
+  

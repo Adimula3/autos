@@ -177,6 +177,12 @@
 .auto-range-sort .price-range, .year-range {
     width: 200px;
 }
+.fa-list  {
+    font-size: 20px;
+    color: #f7f7f7;
+    margin-top: 10px;
+    visibility: hidden!important;
+}
 
 /* Mobile View */
 @media only screen and (max-width: 767px) {
@@ -216,7 +222,7 @@
     .auto-sepcifications {
         padding: 80px 0 0 0;
         cursor: pointer;
-        width: 920px;
+        width: 350px;
         display: flex;
         flex-direction: column;
     }
@@ -268,4 +274,15 @@
     .auto-range-sort .price-range, .year-range {
         width: 285px;
     }
+    .auto-sepcifications .auto-spec-img-box {
+        height: 180px;
+        width: 330px;
+        cursor: pointer;
+    }
+    .fa-list  {
+        margin-top: 52px;
+        visibility: visible!important;
+    }
+    
+    
   }
