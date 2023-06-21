@@ -27,10 +27,10 @@
   .panel h3 {
     font-size: 24px;
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    right: 20px;
     margin: 0;
     opacity: 0;
+    top: 25px;
   }
   .panel .hero-style-right {
     visibility: hidden;
@@ -375,6 +375,14 @@
     position: absolute;
     left: 35px;
     width: 350px;
+  }
+  .panel h3 {
+    font-size: 18px;
+    position: absolute;
+    right: 20px;
+    margin: 0;
+    opacity: 0;
+    top: 30px;
   }
   .hero-style-right h5,
   .hero-style-left h5 {
