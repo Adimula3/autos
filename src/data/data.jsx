@@ -11,6 +11,9 @@ import car5 from '../assets/car5.jpeg';
 import car6 from '../assets/car6.jpeg';
 import car7 from '../assets/car7.jpeg';
 import car8 from '../assets/car6.jpeg';
+import slide1 from "../assets/slide01.jpg";
+import slide2 from "../assets/slide2.jpg";
+import slide3 from "../assets/auto-slider.jpg";
 
 
 const autoDatas = [
@@ -37,6 +40,9 @@ const autoDatas = [
         color: "RED",
         interiorColor: "ORANGE",
         Warranty: "NO",
+        url: slide1,
+        heroStyle: "hero-style-right",
+        contentStyle: "carousel-content-right",
         productImages: [
             car1, offer5, offer2, offer1, offer3
         ],
@@ -64,6 +70,9 @@ const autoDatas = [
         color: "YELLOW",
         interiorColor: "BLACK",
         Warranty: "NO",
+        url: slide2,
+        heroStyle: "hero-style-left",
+        contentStyle: "carousel-content-left",
         productImages: [
             car2, offer1, offer2, offer3, offer4
         ],
@@ -91,6 +100,8 @@ const autoDatas = [
         color: "GREEN",
         interiorColor: "BROWN",
         Warranty: "NO",
+        url: slide3,
+        heroStyle: "hero-style-right",
         productImages: [
             car3, offer1, offer2, offer3, offer4
         ],
@@ -118,6 +129,8 @@ const autoDatas = [
         color: "RED",
         interiorColor: "BLACK",
         Warranty: "NO",
+        url: car6,
+        heroStyle: "hero-style-right",
         productImages: [
             car4, offer1, offer2, offer3, offer4
         ],
@@ -145,6 +158,8 @@ const autoDatas = [
         color: "BLACK",
         interiorColor: "BLACK",
         Warranty: "NO",
+        url: car4,
+        heroStyle: "hero-style-right",
         productImages: [
             car5, offer4, offer5, offer3, offer5
         ],
@@ -172,6 +187,8 @@ const autoDatas = [
         color: "PINK",
         interiorColor: "PINK",
         Warranty: "NO",
+        url: car3,
+        heroStyle: "hero-style-left",
         productImages: [
             car6, offer3, offer4, offer2, offer5
         ],
@@ -199,6 +216,8 @@ const autoDatas = [
         color: "GREY",
         interiorColor: "GREY",
         Warranty: "NO",
+        url: car1,
+        heroStyle: "hero-style-right",
         productImages: [
             car7, offer2, offer5, offer4, offer1
         ],
@@ -226,6 +245,8 @@ const autoDatas = [
         color: "RED",
         interiorColor: "ORANGE",
         Warranty: "NO",
+        url: offer5,
+        heroStyle: "hero-style-left",
         productImages: [
             car8, offer1, offer2, offer3, offer5
         ],
