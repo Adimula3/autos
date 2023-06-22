@@ -83,7 +83,7 @@
   background: #2d3035;
 }
 .nav-brand {
-   display: none;
+  display: none;
 }
 /* Mobile View */
 @media only screen and (max-width: 767px) {
@@ -118,10 +118,10 @@
     border: 2px solid #8d9ba8;
   }
   .navbar-toggler:active {
-    border: 2px solid #8d9ba8!important;
-
+    border: 2px solid #8d9ba8 !important;
   }
-  .fa-bars, .fa-x {
+  .fa-bars,
+  .fa-x {
     font-size: 30px;
     color: #8d9ba8;
   }
@@ -148,11 +148,8 @@
   }
   .header .nav-brand {
     color: #8d9ba8;
- display: block; 
- font-size: 25px;
- text-decoration: none;
+    display: block;
+    font-size: 25px;
+    text-decoration: none;
   }
- 
-  
-
 }
