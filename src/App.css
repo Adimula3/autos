@@ -12,6 +12,7 @@ body.no-scroll {
     position: fixed;
     width: 100%;
   }
+ 
 h1,h2,h5,h6,p,span {
     color: #fff;
 }

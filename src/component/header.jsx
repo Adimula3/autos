@@ -1,15 +1,48 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/header.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import logo from "../assets/mofardson-logo.png";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    document.body.classList.toggle("no-scroll");
   };
+
+  useEffect(() => {
+    function handleScrolling() {
+      if (isMenuOpen) {
+        document.documentElement.style.overflow = "hidden";
+        document.body.style.overflow = "hidden";
+      } else {
+        document.documentElement.style.overflow = "auto";
+        document.body.style.overflow = "auto";
+      }
+    }
+
+    handleScrolling();
+
+    // Remove event listener on unmount
+    return () => {
+      document.removeEventListener("scroll", handleScrolling);
+    };
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    // Reset menu state when navigating to a new page
+    function handleNavigation() {
+      setIsMenuOpen(false);
+    }
+
+    window.addEventListener("beforeunload", handleNavigation);
+
+    // Remove event listener on unmount
+    return () => {
+      window.removeEventListener("beforeunload", handleNavigation);
+    };
+  }, []);
 
   return (
     <div>
@@ -47,43 +80,54 @@ function Header() {
         </div>
         <nav className="navbar navbar-expand-lg">
           <div className="container-fluid">
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded={isMenuOpen ? "true" : "false"}
-              aria-label="Toggle navigation"
-              onClick={toggleMenu}
-            >
-              {isMenuOpen ? (
-                <i class="fa-solid fa-x"></i>
-              ) : (
-                <i className="fa-solid fa-bars "></i>
-              )}
-            </button>
-            <div
-              className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}
-              id="navbarNav"
-            >
-              <ul className="navbar-nav">
-                <li className="nav-item">
-                  <Link className="nav-link " to="/" aria-current="page">
-                    HOME
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/listings">
-                    AUTO LISTINGS
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/">
-                    CONTACT US
-                  </a>
-                </li>
-              </ul>
+            <div className="h-n d-flex">
+              <div>
+                <Link className="nav-brand" to="/">
+                  MOFARDSON-AUTOS
+                </Link>
+              </div>
+              <div>
+                <button
+                  className="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarNav"
+                  aria-controls="navbarNav"
+                  aria-expanded={isMenuOpen ? "true" : "false"}
+                  aria-label="Toggle navigation"
+                  onClick={toggleMenu}
+                >
+                  {isMenuOpen ? (
+                    <i class="fa-solid fa-x"></i>
+                  ) : (
+                    <i className="fa-solid fa-bars "></i>
+                  )}
+                </button>
+                <div
+                  className={`collapse navbar-collapse ${
+                    isMenuOpen ? "show" : ""
+                  }`}
+                  id="navbarNav"
+                >
+                  <ul className="navbar-nav">
+                    <li className="nav-item">
+                      <Link className="nav-link " to="/" aria-current="page">
+                        HOME
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/listings">
+                        AUTO LISTINGS
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="/">
+                        CONTACT US
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </nav>
