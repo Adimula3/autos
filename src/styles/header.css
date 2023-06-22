@@ -112,6 +112,10 @@
 
   .navbar-toggler {
     margin-left: 190px;
+    border: none;
+  }
+  .fa-bars, .fa-x {
+    font-size: 30px;
   }
   @keyframes appear {
     0% {

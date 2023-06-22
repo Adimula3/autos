@@ -8,6 +8,7 @@ function Header() {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    document.body.classList.toggle("no-scroll");
   };
 
   return (
@@ -56,7 +57,11 @@ function Header() {
               aria-label="Toggle navigation"
               onClick={toggleMenu}
             >
-              <span className="navbar-toggler-icon"></span>
+              {isMenuOpen ? (
+                <i class="fa-solid fa-x"></i>
+              ) : (
+                <i className="fa-solid fa-bars "></i>
+              )}
             </button>
             <div
               className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}
