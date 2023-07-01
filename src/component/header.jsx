@@ -57,7 +57,7 @@ function Header() {
             <i className="fa-brands fa-whatsapp"></i>
             <i className="fa-brands fa-twitter"></i>
           </div>
-          <button className="btn btn-primary">Sell Your Car</button>
+          <Link className="testDrive" to="/contact"><button className="btn btn-primary">Sell Your Car</button></Link> 
         </div>
         <div className="header-info d-flex">
           <h2>AutoDealer</h2>

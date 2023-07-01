@@ -129,7 +129,10 @@
     transition: opacity 0.3s ease-in 0.4s;
   }
 
-  
+  .testDrive {
+    text-decoration: none;
+    color: #101010;
+  }
 .carousel-item img {
     height: 50%;
     animation: zoomOut 25s;

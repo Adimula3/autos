@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/footer.css';
+import { Link } from "react-router-dom";
 function Footer() {
     return (
         <div className='footer'>
@@ -8,7 +9,7 @@ function Footer() {
                     <h1>Do you want to sell a car?</h1>
                     <p>Let's get started!</p>
                 </div>
-                <button className='btn btn-primary'>Sell Your Car</button>
+                <Link className="testDrive" to="/contact"><button className='btn btn-primary'>Sell Your Car</button></Link>
             </div>
             <div className='f-g'></div>
             <div className='footer-nav d-flex'>

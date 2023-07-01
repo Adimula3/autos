@@ -6,6 +6,7 @@ import Footer from "../component/footer";
 import agent1 from "../assets/agent-demo.jpeg";
 import Header from "../component/header";
 import { autoDatas } from "../data/data";
+import { Link } from "react-router-dom";
 
 function Home() {
   const slides = [
@@ -22,7 +23,7 @@ function Home() {
       text: "Duis aute irure dolor in reprehenderit in voluptate velit ese cillum dolore fugiat nulla pariatur excepteur sint occaecat cupidatat non proident..",
     },
   ];
-
+ 
   const [activeId, setActiveId] = useState(1);
 
   const onClick = (id) => setActiveId(id);
@@ -46,7 +47,7 @@ function Home() {
               <h2>WANT TO BUY YOUR FAVOURITE CAR</h2>
               <p>YOU'VE COME TO THE RIGHT PLACE TO GET YOUR DREAM CAR</p>
               <span className="price">4 MILLION NAIRA</span>
-              <span className="test-drive">TEST DRIVE</span>
+              <Link className="testDrive" to="/contact"><span className="test-drive" >TEST DRIVE</span></Link>
             </div>
             <h3>{card.title}</h3>
           </div>
