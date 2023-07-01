@@ -162,17 +162,24 @@
     
     .form {
     width: 360px!important;
-  
+  }
+  .contacts .form-control {
+    height: 75px; 
   }
   .mail-img {
-    height: 360px;
-    width: 360px;
+   display: none;
 }
-  .c-f {
-    margin-left: 10px;
-  }
+  
   .c-f p {
     font-weight: 400;
   }
+  .c-details-content span {
+    font-size: 15;
+    font-weight: 300;
+}
+.c-change {
+    display: flex;
+    flex-direction: column-reverse;
+}
    
 }

@@ -14,8 +14,9 @@ function Contact(props) {
         <p className="contact-link">Home / Contact Us</p>
         <div className="contacts d-flex">
           <div className="c-details">
-            <h3>Contact</h3>
+            <h3>Send us a message</h3>
             <span>We're open for any car sale or just to have a chat</span>
+            <div className="c-change">
             <div className="c-details-2 d-flex">
               <div className="c-details-content">
                 <h5>ADDRESS:</h5>
@@ -81,6 +82,8 @@ function Contact(props) {
                 </div>
               </div>
             </form>
+            </div>
+            
             <div className="c-f">
               <p>Follow us here</p>
               <div className="contact-socials d-flex">
