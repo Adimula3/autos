@@ -28,6 +28,12 @@
 .description .icon {
     color: #8d9ba8;
 }
+.description .fa-angle-down {
+    float: right;
+    margin-right: 40px;
+    margin-top: 8px;
+    cursor: pointer;
+}
 /* Mobile View */
 @media only screen and (max-width: 767px) {
     .description {

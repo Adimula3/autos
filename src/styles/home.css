@@ -21,8 +21,11 @@
     gap: 10px!important;
     position: relative;
     transition: flex 0.7s ease-in;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
     
   }
+
   
   .panel h3 {
     font-size: 24px;
@@ -417,10 +420,11 @@
     padding: 30px 0 70px 20px;
     display: flex;
     flex-direction: column;
-    width: 350px;
+    width: 390px;
 }
 .general-vehicle-information p {
-    visibility: hidden; 
+    margin-top: 10px;
+    font-size: 12px;
 }
 
 .general-vehicle-information .dropdown .dropdown-toggle {
