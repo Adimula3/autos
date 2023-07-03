@@ -107,30 +107,6 @@ function ProductDetails() {
                 {showSpecification && <Specification autoData={autoData} />}
               </div>
             </div>
-<<<<<<< HEAD
-            <div className="product-light-box">
-              <img
-                className="product1"
-                src={autoData ? mainImage : ""}
-                alt=""
-              />
-
-              <div className="thumbnail d-flex">
-                {autoData &&
-                  autoData.productImages &&
-                  autoData.productImages.map((productImage, index) => (
-                    <div
-                      key={`image-${index}`}
-                      onClick={() => {
-                        setMainImage(productImage);
-                      }}
-                      className={`thumb ${mainImage === productImage ? "active" : ""
-                        }`}
-                    >
-                      <img src={productImage} alt="" />
-                    </div>
-                  ))}
-=======
             <div className="p-d-c-r">
               <div className="mile-details">
                 <h2>Ready to get your car?</h2>
@@ -170,7 +146,6 @@ function ProductDetails() {
                     </div>
                   </div>
                 </div>
->>>>>>> 5c7e498f8fcc7972da42bedb1a9397cfd54ab414
               </div>
             </div>
           </div>

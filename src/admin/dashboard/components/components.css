@@ -1,0 +1,542 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* loader styles */
+#home-spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background: #191c1f;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+#home-spinner.home-loader {
+  opacity: 1;
+}
+
+#home-spinner .custom-loader {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  animation: s4 4s infinite;
+}
+#home-spinner .custom-loader::before,
+#home-spinner .custom-loader::after {
+  content: "";
+  grid-area: 1/1;
+  border: 8px solid;
+  border-radius: 50%;
+  border-color: #3fbf63 #3fbf4e #0000 #0000;
+  mix-blend-mode: darken;
+  animation: s4 1s infinite linear;
+}
+#home-spinner .custom-loader::after {
+  border-color: #0000 #0000 #e4e4ed #e4e4ed;
+  animation-direction: reverse;
+}
+
+@keyframes s4 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+#main-body #dash-spinner {
+  position: relative;
+  top: 80px;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background: #191c1f;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+#main-body #dash-spinner.dash-loader {
+  opacity: 1;
+}
+
+#dash-spinner .custom-loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #3fbf5d 94%, #0000) top/8px 8px
+      no-repeat,
+    conic-gradient(#0000 30%, #3fbf56);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: s3 1s infinite linear;
+}
+
+@keyframes s3 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+/* top header styles starts here */
+.top-header {
+  position: sticky;
+  top: 0;
+  padding: 10px 40px;
+  font-family: "Lato", sans-serif;
+  background: #24262b;
+  color: #ffffff;
+}
+
+.top-header .navbar-header {
+  display: flex;
+  flex: auto;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.top-header .navbar-header .navbar-logo {
+  display: flex;
+  flex: auto;
+  flex-direction: row;
+}
+
+.top-header .navbar-header .navbar-logo .hamburger-menu .btn {
+  margin-right: 30px;
+  padding: 8px 12px;
+  color: #000000;
+  background: #191c1f;
+  border: 1px solid #383838;
+}
+
+.top-header .navbar-header .navbar-logo .hamburger-menu .btn:hover {
+  background: #dedede;
+  border: 1px solid #dedede;
+}
+
+.top-header .navbar-header .navbar-logo .hamburger-menu .btn .fa-solid {
+  font-size: 18px;
+}
+
+.top-header .navbar-header .navbar-logo .logo-name .logo-text {
+  cursor: pointer;
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-family: "Itim", cursive;
+  font-weight: bold;
+  background-image: linear-gradient(
+    to right,
+    #777777 0,
+    #e4e4e4 22%,
+    #b5b5b5 45%,
+    #e3e3e3 55%,
+    #c4c4c4 78%,
+    #898989 100%
+  );
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.navbar-others ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar-others ul li .btn {
+  background: #191c1f;
+  border: 1px solid #383838;
+  padding: 8px 15px;
+  margin-right: 10px;
+  color: #aaaaaa;
+}
+.navbar-others ul li .fa-solid {
+  font-size: 18px;
+}
+
+.navbar-others ul li .nav-profile {
+  margin-left: 20px;
+}
+
+.navbar-others ul li .nav-profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px solid #9f9f9f;
+}
+
+/* http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/howto/howto_js_sidenav.asp.html#gsc.tab=0 */
+
+.side-bar {
+  display: block;
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: auto;
+  left: 0;
+  transition: 0.5s;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  background: #24262b;
+  scrollbar-width: none;
+}
+
+.side-bar::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+.sidebar-container {
+  padding: 10px 10px;
+  margin-bottom: 50px;
+  font-family: "Poppins", sans-serif;
+}
+
+.sidebar-profile {
+  /* display: none; */
+  display: block;
+}
+
+.sidebar-profile .sidebar-admin {
+  display: flex;
+  flex: auto;
+  flex-direction: row;
+  padding: 30px 20px 10px;
+}
+
+.sidebar-profile .sidebar-admin .sidebar-image img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 25px;
+  border: 1px solid #464646;
+}
+.sidebar-profile .sidebar-admin .sidebar-admin-info {
+  margin-top: 5px;
+  margin-left: 15px;
+}
+.sidebar-profile .sidebar-admin .sidebar-admin-info p {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.sidebar-profile .sidebar-admin .sidebar-admin-info .name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #aaaaaa;
+}
+
+.sidebar-profile .sidebar-admin .sidebar-admin-info .role {
+  font-size: 14px;
+  font-weight: 500;
+  color: #727272;
+}
+
+.sidebar-mini {
+  padding: 5px 20px;
+}
+
+.sidebar-mini ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar-mini ul li .btn {
+  background: #191c1f;
+  border: 1px solid #383838;
+  padding: 8px 15px;
+  margin-right: 15px;
+  color: #aaaaaa;
+}
+.sidebar-mini ul li .fa-solid {
+  font-size: 16px;
+}
+
+.sidebar-nav nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sidebar-nav nav ul .menu-item {
+  margin: 10px 0;
+  padding: 9px 15px;
+  border-radius: 5px;
+}
+
+.sidebar-nav nav ul .menu-item.active {
+  background: #191c1f;
+}
+.sidebar-nav nav ul .menu-item.active .menu-link {
+  color: #aaaaaa;
+}
+
+.sidebar-nav nav ul .menu-item .menu-link {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #777777;
+}
+.sidebar-nav nav ul .menu-item .menu-link .fa-solid {
+  font-size: 18px;
+}
+.sidebar-nav nav ul .menu-item .menu-link .sidebar-text {
+  margin-left: 10px;
+  /* display: none; */
+}
+
+@media only screen and (max-width: 900px) {
+  .top-header {
+    padding: 10px 20px;
+  }
+
+  .top-header .navbar-header {
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .top-header .navbar-header .navbar-logo {
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+  }
+
+  .top-header .navbar-header .navbar-logo .hamburger-menu .btn {
+    margin-right: 20px;
+    padding: 8px 12px;
+  }
+
+  .top-header .navbar-header .navbar-logo .hamburger-menu .btn .fa-solid {
+    font-size: 17px;
+  }
+
+  .top-header .navbar-header .navbar-logo .logo-name .logo-text {
+    font-size: 24px;
+  }
+
+  .navbar-others ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar-others ul li .btn {
+    padding: 8px 15px;
+    margin-right: 10px;
+  }
+  .navbar-others ul li .fa-solid {
+    font-size: 16px;
+  }
+
+  .navbar-others ul li .nav-profile {
+    margin-left: 20px;
+  }
+
+  .navbar-others ul li .nav-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+  }
+
+  /* http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/howto/howto_js_sidenav.asp.html#gsc.tab=0 */
+
+  .side-bar {
+    display: block;
+    height: 100%;
+    width: 70px;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .sidebar-container {
+    padding: 10px 5px;
+    margin-bottom: 50px;
+  }
+
+  .sidebar-profile {
+    display: none;
+    /* display: block; */
+  }
+
+  .sidebar-profile .sidebar-admin {
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    padding: 30px 20px 10px;
+  }
+
+  .sidebar-profile .sidebar-admin .sidebar-image img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+  .sidebar-profile .sidebar-admin .sidebar-admin-info {
+    margin-top: 3px;
+    margin-left: 10px;
+  }
+  .sidebar-profile .sidebar-admin .sidebar-admin-info p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .sidebar-profile .sidebar-admin .sidebar-admin-info .name {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .sidebar-profile .sidebar-admin .sidebar-admin-info .role {
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .sidebar-mini {
+    padding: 5px 10px;
+  }
+
+  .sidebar-mini ul li .btn {
+    padding: 8px 15px;
+    margin-right: 10px;
+  }
+  .sidebar-mini ul li .fa-solid {
+    font-size: 16px;
+  }
+
+  .sidebar-nav nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .sidebar-nav nav ul .menu-item {
+    margin: 15px 0;
+    padding: 8px 15px;
+    border-radius: 5px;
+  }
+
+  .sidebar-nav nav ul .menu-item .menu-link {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .sidebar-nav nav ul .menu-item .menu-link .fa-solid {
+    font-size: 18px;
+  }
+  .sidebar-nav nav ul .menu-item .menu-link .sidebar-text {
+    margin-left: 10px;
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .top-header {
+    padding: 10px 15px;
+  }
+
+  .top-header .navbar-header .navbar-logo .hamburger-menu .btn {
+    margin-right: 20px;
+    padding: 8px 12px;
+  }
+
+  .top-header .navbar-header .navbar-logo .hamburger-menu .btn .fa-solid {
+    font-size: 17px;
+  }
+
+  .top-header .navbar-header .navbar-logo .logo-name .logo-text {
+    margin-top: 5px;
+    font-size: 21px;
+  }
+
+  .navbar-others {
+    display: none;
+  }
+
+  .side-bar {
+    display: block;
+    height: 100%;
+    width: 60px;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .sidebar-container {
+    padding: 10px 5px;
+    margin-bottom: 30px;
+  }
+
+  .sidebar-profile .sidebar-admin {
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    padding: 20px 20px 10px;
+  }
+
+  .sidebar-profile .sidebar-admin .sidebar-image img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+
+  .sidebar-profile .sidebar-admin .sidebar-admin-info {
+    margin-top: 3px;
+    margin-left: 10px;
+  }
+
+  .sidebar-profile .sidebar-admin .sidebar-admin-info .name {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .sidebar-profile .sidebar-admin .sidebar-admin-info .role {
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .sidebar-mini {
+    padding: 5px 10px;
+  }
+
+  .sidebar-mini ul li .btn {
+    padding: 8px 14px;
+  }
+
+  .sidebar-nav nav ul .menu-item {
+    margin: 15px 0;
+    padding: 8px 15px;
+    border-radius: 5px;
+  }
+
+  .sidebar-nav nav ul .menu-item .menu-link {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .sidebar-nav nav ul .menu-item .menu-link .fa-solid {
+    font-size: 18px;
+  }
+  .sidebar-nav nav ul .menu-item .menu-link .sidebar-text {
+    margin-left: 10px;
+    display: none;
+  }
+}
