@@ -1,15 +1,15 @@
 import React from 'react';
 import '../styles/footer.css';
+import { Link } from "react-router-dom";
 function Footer() {
     return (
         <div className='footer'>
             <div className='footer-content d-flex'>
-               
                 <div className='f-c'>
                     <h1>Do you want to sell a car?</h1>
                     <p>Let's get started!</p>
                 </div>
-                <button className='btn btn-primary'>Sell Your Car</button>
+                <Link className="testDrive" to="/contact"><button className='btn btn-primary'>Sell Your Car</button></Link>
             </div>
             <div className='f-g'></div>
             <div className='footer-nav d-flex'>
@@ -24,10 +24,10 @@ function Footer() {
             </p>
             <div className='hedaer-contact d-flex'>
                 <div className='footer-socials d-flex'>
-                <i className="fa-brands fa-instagram"></i>
-                <i className="fa-brands fa-facebook-f"></i>
-                <i className="fa-brands fa-whatsapp"></i>
-                <i className="fa-brands fa-twitter"></i>
+                   <i className="fa-brands fa-instagram"></i>
+                   <i className="fa-brands fa-facebook-f"></i>
+                   <i className="fa-brands fa-whatsapp"></i>
+                   <i className="fa-brands fa-twitter"></i>
                 </div>
             </div>
         </div>

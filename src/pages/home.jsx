@@ -1,41 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/home.css";
 import Carousel from "react-bootstrap/Carousel";
 import { Dropdown, Row, Col, Container } from "react-bootstrap";
-import slide1 from "../assets/slide01.jpg";
-import slide2 from "../assets/slide2.jpg";
-import slide3 from "../assets/auto-slider.jpg";
-import offer1 from "../assets/car1.jpeg";
-import offer2 from "../assets/car2.jpeg";
-import offer3 from "../assets/car3.jpeg";
-import offer4 from "../assets/car4.jpeg";
-import offer5 from "../assets/car5.jpeg";
-import offer6 from "../assets/car6.jpeg";
-import offer7 from "../assets/car7.jpeg";
-import offer8 from "../assets/car8.jpeg";
 import Footer from "../component/footer";
 import agent1 from "../assets/agent-demo.jpeg";
 import Header from "../component/header";
+import { autoDatas } from "../data/data";
+import { Link } from "react-router-dom";
 
 function Home() {
-  const images = [
-    {
-      src: slide1,
-      alt: "Image 1",
-      contentStyle: "carousel-content-right",
-    },
-    {
-      src: slide2,
-      alt: "Image 2",
-      contentStyle: "carousel-content-left",
-    },
-    {
-      src: slide3,
-      alt: "Image 3",
-      contentStyle: "carousel-content-right",
-    },
-  ];
-
   const slides = [
     {
       title: "Joseph Lagbalu",
@@ -50,68 +23,36 @@ function Home() {
       text: "Duis aute irure dolor in reprehenderit in voluptate velit ese cillum dolore fugiat nulla pariatur excepteur sint occaecat cupidatat non proident..",
     },
   ];
-  const offers = [
-    {
-      src: offer1,
-      title: "Mazda CX 9",
-      price: "1 Million",
-    },
-    {
-      src: offer2,
-      title: "Nissan Murano",
-      price: "2 Million",
-    },
-    {
-      src: offer3,
-      title: "Mazda CX 9 SUV",
-      price: "3 Million",
-    },
-    {
-      src: offer4,
-      title: "Renault Koleos",
-      price: "4 Million",
-    },
-    {
-      src: offer5,
-      title: "Volkswagen Atlas 2",
-      price: "5 Million",
-    },
-    {
-      src: offer6,
-      title: "Audi Q5 3",
-      price: "6 Million",
-    },
-    {
-      src: offer7,
-      title: "Audi RS 4 Avant",
-      price: "7 Million",
-    },
-    {
-      src: offer8,
-      title: "DS 7 Crossback",
-      price: "8 Million",
-    },
-  ];
+ 
+  const [activeId, setActiveId] = useState(1);
+
+  const onClick = (id) => setActiveId(id);
 
   return (
     <div className="home">
       <div className="heads">
         <Header />
       </div>
-      <Carousel interval={null} fade className="carousel">
-        {images.map((image, index) => (
-          <Carousel.Item key={index} className="carousel-item">
-            <img className="img-carousel" src={image.src} alt={image.alt} />
-            <div className={image.contentStyle}>
+
+      <div className="containers">
+        {autoDatas.map((card, index) => (
+          <div
+            key={card.id}
+            className={`panel ${activeId === card.id ? "active" : ""}`}
+            onClick={() => onClick(card.id)}
+            style={{ backgroundImage: `url(${card.url})` }}
+          >
+            <div className={card.heroStyle}>
               <h5>DRIVE YOUR DREAM CAR</h5>
               <h2>WANT TO BUY YOUR FAVOURITE CAR</h2>
               <p>YOU'VE COME TO THE RIGHT PLACE TO GET YOUR DREAM CAR</p>
-              <span className="carousel-price">4 MILLION NAIRA</span>
-              <span className="carousel-test-drive">TEST DRIVE</span>
+              <span className="price">4 MILLION NAIRA</span>
+              <Link className="testDrive" to="/contact"><span className="test-drive" >TEST DRIVE</span></Link>
             </div>
-          </Carousel.Item>
+            <h3>{card.title}</h3>
+          </div>
         ))}
-      </Carousel>
+      </div>
 
       <div className="general-vehicle-information d-flex">
         <div className="Makers">
@@ -168,7 +109,7 @@ function Home() {
 
         <Container className="new-offers">
           <Row>
-            {offers.map((offer, index) => (
+            {autoDatas.slice(0, 8).map((offer, index) => (
               <Col key={index} sm={3}>
                 <div className="card">
                   <div className="card-images">

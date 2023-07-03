@@ -1,0 +1,185 @@
+.contact {
+    margin-top: 50px;
+}
+.contacts {
+    margin-top: 120px;
+}
+.c-details {
+    margin-left: 100px;
+}
+.c-details h3 {
+    color: #f1f1f1
+}
+.c-details span {
+    color: #8d9ba8;
+    font-size: 15px;
+}
+.c-details-2 {
+    margin-top: 30px;
+    gap: 30px;
+}
+.c-details-2 h5 {
+    font-size: 15px;
+    color: #8d9ba8;
+}
+.c-details-content {
+    width: 150px;
+}
+.c-details-content span {
+    font-size: 15;
+}
+.form  {
+    margin-top: 50px;
+}
+.form {
+    width: 600px;
+  
+  }
+  .form-control {
+    border: none;
+    border-bottom: 1px solid #d9d9d9;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 0; 
+    font-family: 'Nunito', sans-serif;
+    background: #191c1f!important;
+  }
+  .form-control:active, .form-control:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #8d9ba8;
+   }
+   .contacts .form-control {
+    height: 65px; 
+  }
+  .f-msg {
+    height: 130px!important;
+  }
+  form.border-right {
+    padding-right: 6rem !important; }
+    @media (max-width: 991.98px) {
+      form.border-right {
+        padding-right: 0 !important;
+        border-right: none !important; 
+      } 
+    }
+    .contact .btn {
+        margin-top: 20px;
+        border-radius: 5px!important;
+        background: rgb(60, 152, 36);
+        background: radial-gradient(
+          circle,
+          rgba(60, 152, 36, 1) 70%,
+          rgba(40, 136, 50, 1) 100%
+        );
+        border: none;
+        padding: 15px 15px 15px 15px!important;
+        font-size: 15px;
+    }
+    .c-f p {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #8d9ba8;
+    }
+    
+      .contact-socials .fa-brands {
+        font-size: 23px;
+        padding-right: 15px;
+        color: #8d9ba8;
+      }
+      
+      .contact-socials .fa-whatsapp:hover {
+        color: #25d366;
+      }
+      .contact-socials .fa-instagram:hover {
+        color: #c13584;
+      }
+      .contact-socials .fa-facebook-f:hover {
+        color: #1877f2;
+      }
+      .contact-socials .fa-twitter:hover {
+        color: #1da1f2;
+      }
+
+      .contact-title {
+        font-size: 45px;
+        margin-left: 100px;
+      }
+      .contact-link {
+        font-size: 15px;
+        padding-top: 20px;
+        color: #8d9ba8;
+        margin-left: 100px;
+    }
+    
+    .mail-img {
+        height: 700px;
+        width: 700px;
+    }
+    /* Mobile View */
+@media only screen and (max-width: 767px) { 
+    .contact-title {
+        font-size: 25px;
+        margin-left: 10px;
+      }
+      .contact-link {
+        font-size: 14px;
+        padding-top: 15px;
+        margin-left: 10px;
+    }
+    .contact {
+        margin-top: 50px;
+    }
+    .contacts {
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+    }
+    .c-details h3 {
+        font-weight: 300;
+    }
+    .c-details {
+        margin-left: 10px;
+    }
+    .c-details-2 {
+        margin-top: 30px;
+        gap: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    .c-details-2 h5 {
+        font-size: 15px;
+        color: #8d9ba8;
+    }
+    .c-details-2 {
+        margin-top: 30px;
+        gap: 30px;
+    }
+    .c-details-content {
+        width: 300px;
+    }
+    
+    .form {
+    width: 360px!important;
+  }
+  .contacts .form-control {
+    height: 75px; 
+  }
+  .mail-img {
+   display: none;
+}
+  
+  .c-f p {
+    font-weight: 400;
+  }
+  .c-details-content span {
+    font-size: 15;
+    font-weight: 300;
+}
+.c-change {
+    display: flex;
+    flex-direction: column-reverse;
+}
+   
+}

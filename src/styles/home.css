@@ -3,72 +3,136 @@
     text-align: center;
     font-size: 50px;
 }
-/*.....Carousel............*/
-.carousel {
-    height: 70%;
-}
-.carousel-content-left {
-   position: absolute;
-   top: 300px;
-   left: 180px;
-   width: 500px;
-}
-.carousel-content-left h5 {
+/*.....Hero............*/
+.containers {
+    display: flex;
+    overflow-x: hidden;
+  }
+  
+  .panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
     color: #fff;
-    margin-bottom: 20px;
-}
-.carousel-content-left h2 {
-    color: #fff;
-    font-size: 50px;
-    line-height: 65px;
-}
-.carousel-content-left p {
-    color: #fff;
-    font-size: 25px;
-    font-weight: 200;
-    margin-bottom: 50px;
-}
-.carousel-content-left span {
-    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 0 15px 10px 0;
+    gap: 10px!important;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    
+  }
 
-}
-.carousel-content-right {
+  
+  .panel h3 {
+    font-size: 24px;
     position: absolute;
-    top: 350px;
-    right: 130px;
+    right: 20px;
+    margin: 0;
+    opacity: 0;
+    top: 25px;
+  }
+  .panel .hero-style-right {
+    visibility: hidden;
+    margin-top: 250px;
+    position: absolute;
+    left: 420px;
     width: 500px;
- }
- .carousel-content-right h5 {
+  }
+  .panel .hero-style-left {
+    visibility: hidden;
+    margin-top: 250px;
+    position: absolute;
+    left: 50px;
+    width: 500px;
+  }
+  .hero-style-right h5 {
+    font-size: 20px;
     color: #fff;
     margin-bottom: 20px;
-}
-.carousel-content-right h2 {
+  }
+  .hero-style-left h5 {
+    font-size: 20px;
     color: #fff;
-    font-size: 50px;
-    line-height: 65px;
-}
-.carousel-content-right p {
+    margin-bottom: 20px;
+   
+  }
+  .hero-style-left h2 {
     color: #fff;
-    font-size: 25px;
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .hero-style-right h2 {
+    color: #fff;
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .hero-style p {
+    color: #fff;
+    font-size: 20px;
     font-weight: 200;
     margin-bottom: 50px;
-}
-.carousel-content-right span {
+  }
+  .hero-style-right p {
     color: #fff;
-
-}
-.carousel-price {
+    font-size: 20px;
+    font-weight: 200;
+    margin-bottom: 50px;
+  }
+  .hero-style-left p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 200;
+    margin-bottom: 50px;
+  }
+.hero-style-right .price {
     background: rgb(60,152,36);
     background: radial-gradient(circle, rgba(60,152,36,1) 70%, rgba(40,136,50,1) 100%);
     padding: 20px;
-    font-size: 20px;
+    font-size: 12px;
 }
-.carousel-test-drive {
+.hero-style-left .price {
+    background: rgb(60,152,36);
+    background: radial-gradient(circle, rgba(60,152,36,1) 70%, rgba(40,136,50,1) 100%);
+    padding: 20px;
+    font-size: 12px;
+}
+.hero-style-right .test-drive {
     background: #fff;
     padding: 20px;
-    font-size: 20px;
+    font-size: 12px;
     color: #101010!important;
 }
+.hero-style-left .test-drive {
+    background: #fff;
+    padding: 20px;
+    font-size: 12px;
+    color: #101010!important;
+}
+  .panel.active {
+    flex: 8;
+  }
+  
+  .panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+  }
+  .panel.active .hero-style-right {
+    visibility: visible;
+    transition: opacity 0.3s ease-in 0.4s;
+  }
+  .panel.active .hero-style-left {
+    visibility: visible;
+    transition: opacity 0.3s ease-in 0.4s;
+  }
+
+  .testDrive {
+    text-decoration: none;
+    color: #101010;
+  }
 .carousel-item img {
     height: 50%;
     animation: zoomOut 25s;
@@ -208,7 +272,7 @@
     margin-left: 80px;
 }
 .Testimonials .carousel {
-    padding: 100px 50px 0 50px;
+    padding: 80px 50px 0 50px;
     width: 700px;
     text-align: center;
 }
@@ -252,9 +316,7 @@
     padding: 0 0 0 0;
     height: 250px;
 }
-.Agents img {
 
-}
 .Trusted-dealers .Agents .agent-details {
     padding: 20px 0 0 35px;
 }
@@ -288,4 +350,182 @@
 }
 .agent-list {
    gap: 15px;
+}
+/* Mobile View */
+@media only screen and (max-width: 767px) {
+    .containers {
+        width: calc(100vw - 20px); /* Subtract the margin to prevent overflow */
+        margin: 0 10px; /* Add margin to the containers instead of individual panels */
+        flex-wrap: nowrap; /* Prevent panels from wrapping onto multiple lines */
+      }
+      .panel {
+        margin: 0 5px 10px 0;
+      }
+    
+      .panel:nth-of-type(n+4) {
+        display: none;
+      }
+      .panel:nth-of-type(2) {
+        margin-left: 10px;
+      }
+      .panel:nth-of-type(3) {
+        margin-left: 10px;
+      }
+      .panel.active {
+        flex: 8;
+      }
+      .panel .hero-style-right,
+   .panel .hero-style-left {
+    visibility: hidden;
+    margin-top: 400px;
+    position: absolute;
+    left: 35px;
+    width: 350px;
+  }
+  .panel h3 {
+    font-size: 18px;
+    position: absolute;
+    right: 20px;
+    margin: 0;
+    opacity: 0;
+    top: 30px;
+  }
+  .hero-style-right h5,
+  .hero-style-left h5 {
+    font-size: 17px;
+    margin-bottom: 100px;
+  }
+  .hero-style-right h2,
+  .hero-style-left h2 {
+    font-size: 25px;
+    display: none;
+  }
+  .hero-style-right p,
+  .hero-style-left p {
+    font-size: 15px;
+    width: 270px;
+    display: none;
+  }
+  .hero-style-left .price,
+  .hero-style-right .price {
+    padding: 15px;
+  }
+  .hero-style-left .test-drive,
+  .hero-style-right .test-drive {
+    padding: 15px;
+  }
+  .panel.panel.active .hero-style-left, .hero-style-right {
+    visibility: visible;
+  }
+  /*.....General-vehicle-information............*/
+  .general-vehicle-information {
+    margin: 0 50px 0 0;
+    padding: 30px 0 70px 20px;
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+}
+.general-vehicle-information p {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.general-vehicle-information .dropdown .dropdown-toggle {
+    width: 345px;
+    text-align: left;
+    font-size: 12px;
+}
+.general-vehicle-information .dropdown-menu {
+    width: 345px;
+   
+  }
+  .general-vehicle-information .search-button .btn {
+    
+    padding: 8px 35px 8px 35px;
+    width: 345px;
+}
+
+/*.....Latest-offers............*/
+
+.Latest-offers {
+    padding: 10px 0 0  2px;
+}
+
+.new-offers{
+   
+}
+.card-images {
+    width: 100%;
+    height: 200px!important;
+}
+/*.....Trusted Agents............*/
+
+.Trusted-dealers {
+    padding: 10px 10px 100px 10px;
+}
+.agent-list {
+    display: flex;
+    flex-direction: column;
+}
+.Trusted-dealers .t-sp1 {
+    margin-left: 20px;
+}
+.Trusted-dealers .Agents {
+    width: 350px;
+    margin: 70px 0 0 10px;
+    background: #1c1e22;
+    padding: 0 0 0 0;
+    height: 150px;
+}
+.agent-list {
+    gap: 0;
+ }
+
+.Trusted-dealers .Agents .agent-details {
+    padding: 20px 0 0 35px;
+}
+.agent-details h5 {
+    font-size: 25px;
+}
+.agent-details span {
+    font-size: 15px;
+}
+.agent-details p {
+   display: none;
+}
+.agent-socials .fa-brands {
+    font-size: 18px;
+    padding-right: 15px;
+    color: #8d9ba8;
+    padding-top: 20px;
+}
+/*.....Testimonials............*/
+
+.Testimonials {
+    padding: 0 10px 0 10px;
+}
+.Testimonials h1 {
+    padding: 100px 0 0 0;
+    font-size: 35px;
+}
+.Testimonials span {
+    font-size: 14px;
+    margin-left: 20px;
+}
+.Testimonials .carousel {
+    padding: 40px 0 0 0;
+    width: 350px;
+    text-align: center;
+}
+
+.Testimonials .carousel .Tc-content {
+   height: 200px;
+}
+.Testimonials .Tc-content h4 {
+    font-size: 25px;
+}
+.Testimonials .Tc-content p {
+    font-size: 15px;
+}
+
 }

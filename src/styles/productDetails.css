@@ -29,6 +29,7 @@
     background: rgb(60,152,36);
     background: radial-gradient(circle, rgba(60,152,36,1) 70%, rgba(40,136,50,1) 100%);
     padding: 5px 20px 5px 20px;
+    border-radius: 8px;
 }
 .auto-info .description-details p {
     padding-top: 20px;
@@ -38,6 +39,7 @@
     width: 750px;
     height: 445px;
     margin-left: 100px;
+    border-radius: 8px;
 }
 .thumbnail {
     margin-left: 100px;
@@ -86,13 +88,11 @@
 }
 .mile-details {
     margin-left: 100px;
-
+    background: #1c1e22;
+    padding: 30px 5px 30px 5px; 
+    border-radius: 5px;
 }
 .mile-details .m-t-f-box {
-    margin-bottom: 100px;
-    padding: 20px 60px 20px 60px;
-    background: #1c1e22;
-    color: #8d9ba8;
     box-shadow: -2px -1px 12px 0px rgba(0,0,0,0.75);
 -webkit-box-shadow: -2px -1px 12px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: -2px -1px 12px 0px rgba(0,0,0,0.75);
@@ -100,3 +100,184 @@
 .product-specific-details p {
     cursor: pointer;
 }
+.mile-details .m-p {
+    color: #8d9ba8;
+    text-align: left;
+}
+.mile-details .seller-details {
+    margin-top: 60px;
+}
+.seller-details .seller-img {
+    border-radius: 8px;
+    height: 150px;
+    width: 150px;
+}
+.seller-details .agent-name {
+    color: #8d9ba8;
+    font-weight: 700;
+}
+.seller-details .seller p {
+    margin: 30px 0 0 10px;
+}
+.seller-details .agent-socials {
+    margin: 30px 0 0 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.mile-details{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mile-details .call-details {
+    margin: 50px 0 0 30px
+}
+.mile-details .fa-phone {
+    background: #d75448;
+    font-size: 28px;
+    padding: 10px 15px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.mile-details .phone {
+    background: #ef5d50;
+    font-size: 18px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 250px;
+    height: 48px;
+    padding: 10px 0 0 0;
+    text-align: center;
+}
+.mile-details .fa-whatsapp {
+    background: #168567;
+    font-size: 30px;
+    padding: 10px 15px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.mile-details .whatsapp {
+    background: #199473;
+
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 18px;
+    width: 250px;
+    height: 50px;
+    padding: 10px 0 0 0;
+    text-align: center;
+}
+.mile-details .fa-envelope {
+    background: #3b7db5;
+    font-size: 30px;
+    padding: 10px 15px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.mile-details .mail {
+    background: #428bca;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 18px;
+    width: 250px;
+    height: 50px;
+    padding: 10px 0 0 0;
+    text-align: center;
+}
+.call-details .c-details {
+    cursor: pointer;
+}
+/* Mobile View */
+@media only screen and (max-width: 767px) {
+    .product-details .product-details-content {
+        margin-top: 50px!important;
+    }
+    .product-details .auto-title {
+        padding: 100px 0 0 10px;
+    }
+    .product-details .auto-title h2 {
+        font-size: 25px;
+    }
+    .product-details .auto-title p {
+        margin-left: 10px;
+    }
+    .product-details .product-name-price {
+        width: 350px;
+        margin-left: 10px;
+        padding-bottom: 20px;
+    }
+    .product-details .product-name-price p {
+        font-size: 20px;
+    }
+    .product-details .product-name-price span {
+        font-size: 18px;
+        padding: 5px 20px 5px 20px;
+    }    
+    .product-light-box {
+        margin-left: 10px;
+    }
+    .product1 {
+        width: 350px;
+        height: 245px;
+        margin-left: 10px;
+    }
+    .thumbnail {
+        margin-left: 10px;
+        margin-top: 20px;
+        gap: 15px;
+        width: 650px;
+        justify-content: left;
+        margin-bottom: 0!important;
+    }
+    .product-specific-details {
+        gap: 30px;
+        margin-left: 10px;
+        padding: 5px 0 0 20px;
+        background: #1c1e22;
+        width: 375px;
+        margin-top: 20px;
+    }
+    .product-specific-details p {
+        font-size: 15px;
+    }
+    .product-details .product-details-content {
+        margin-top: 150px;
+    }
+    .p-d-c {
+        display: flex;
+        flex-direction: column;
+    }
+    .mile-details {
+        margin-left: 10px;
+        background: #1c1e22;
+        padding: 30px 5px 30px 5px; 
+        border-radius: 5px;
+        width: 375px;
+    }
+    .mile-details .m-p {
+        text-align: center;
+    }
+    .product-details .product-name-price {
+        justify-content: space-between;
+    }
+    .product-details .product-name-price span {
+        font-size: 15px;
+        background: rgb(60,152,36);
+        background: radial-gradient(circle, rgba(60,152,36,1) 70%, rgba(40,136,50,1) 100%);
+        padding: 10px 15px 5px 15px;
+        border-radius: 8px;
+    }
+    .thumbnail {
+        margin-left: 0;
+        margin-top: 30px;
+        gap: 10px;
+        width: 375px;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .call-details  {
+        padding-right: 50px;
+    }
+  }
