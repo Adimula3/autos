@@ -14,7 +14,7 @@ function ProductDetails() {
   const [showFeatures, setShowFeatures] = useState(false);
   const [showSpecification, setShowSpecification] = useState(false);
 
-  const [mainImage, setMainImage] = useState(null)
+  const [mainImage, setMainImage] = useState(null);
 
   const handleDescriptionClick = () => {
     setShowDescription(true);
@@ -41,11 +41,10 @@ function ProductDetails() {
     );
     // console.log(autoDetails);
     setAutoData(autoDetails);
-    setMainImage(autoDetails.productImages[0])
+    setMainImage(autoDetails.productImages[0]);
   };
 
   useEffect(() => {
-
     getAutoDetails();
 
     // eslint-disable-next-line
@@ -85,12 +84,12 @@ function ProductDetails() {
                       onClick={() => {
                         setMainImage(productImage);
                       }}
-                      className={`thumb ${mainImage === productImage ? 'active' : ''}`}
+                      className={`thumb ${mainImage === productImage ? "active" : ""
+                        }`}
                     >
                       <img src={productImage} alt="" />
                     </div>
                   ))}
-
               </div>
             </div>
           </div>
