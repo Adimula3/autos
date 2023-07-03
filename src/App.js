@@ -6,6 +6,7 @@ import AutoListings from './pages/autoListings';
 import ProductDetails from './pages/productDetails';
 import Contact from './pages/contact';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import SideBar from './dashboard/sidebar';
 function App() {
   return (
     <div className="App">
@@ -15,6 +16,7 @@ function App() {
                  <Route path='/listings' element={<AutoListings />} />
                  <Route path='/productDetails/:productId' element={<ProductDetails />} />
                  <Route path='/contact' element={<Contact />} />
+                 <Route path='/side' element={<SideBar />} />
               </Routes>
            </Router>
     </div>
