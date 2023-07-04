@@ -1,0 +1,109 @@
+.auth-header {
+  background: #000000;
+  font-family: "Lato", sans-serif;
+}
+
+.auth-header .navbar-header {
+  color: #f7f7f7;
+  font-size: 23px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: 20px;
+  font-family: "Itim", cursive;
+  padding: 10px 40px;
+}
+
+.auth-header .navbar-header img {
+  width: 60px;
+  margin-right: 10px;
+  border-radius: 30px;
+}
+
+.admin-container {
+  padding: 20px 50px;
+  font-family: "Poppins", sans-serif;
+}
+
+.auth-form {
+  margin-top: 20px;
+  margin-right: 20px;
+  border: 1px solid #717171;
+  padding: 40px 40px 20px;
+  border-radius: 15px;
+}
+
+.auth-form .form-header {
+  text-align: center;
+}
+.auth-form .form-header .title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #32902b;
+}
+
+.auth-form .form-group {
+  margin: 30px 1px;
+}
+
+.auth-form .form-group .label-primary {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+  display: none;
+}
+
+.auth-form .form-group input {
+  height: 50px;
+  font-size: 15px;
+  border: 1px solid transparent;
+  padding-left: 0;
+  border-bottom: 2px solid #0ba600;
+  border-radius: 1px;
+}
+
+.auth-form .form-group input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.auth-form .form-group .btn {
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-image: linear-gradient(
+    to right,
+    #4aca41 0%,
+    #0ba600 51%,
+    #32902b 100%
+  );
+  margin-top: 20px;
+  padding: 12px 50px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #fff;
+  border-radius: 10px;
+  border: 0 solid transparent;
+  display: block;
+}
+
+.auth-form .form-group .btn:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.auth-form .p-create {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.auth-form .p-create .link {
+  font-size: 15px;
+  font-weight: 500;
+  color: #32902b;
+  text-transform: capitalize;
+  text-decoration: none;
+}
