@@ -1,0 +1,225 @@
+
+.main-container {
+  background-color: #f1f1f1;
+}
+.main-container h1 {
+  color: #191c1f;
+}
+.file-upload {
+  margin-top: 50px;
+  gap: 50px;
+}
+.file-upload-btn {
+    margin: 0 0 100px 0;
+    color: #fff;
+    background: #191c1f;
+    border: none;
+    padding: 10px 250px 10px 250px;
+    border-radius: 4px;
+    border-bottom: 4px solid #191c1f;
+    transition: all 0.2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  .file-upload-btn:hover {
+    background: #191c1f;
+    color: #ffffff;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .file-upload-btn:active {
+    border: 0;
+    transition: all 0.2s ease;
+  }
+  .file-upload-content {
+    display: none;
+    text-align: center;
+  }
+  .file-upload-input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .image-upload-wrap {
+    margin-top: 20px;
+    margin-left: 40px;
+    border: 4px dashed #191c1f;
+    position: relative;
+    width: 92%;
+    height: 200px;
+  }
+  
+  .image-dropping,
+  .image-upload-wrap:hover {
+   
+    border: 4px dashed #8d9ba8;;
+  }
+  .image-title-wrap {
+    padding: 0 15px 15px 15px;
+    color: #222;
+  }
+  
+  .drag-text {
+    text-align: center;
+  }
+  
+  .drag-text h3 {
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #191c1f;
+    padding: 60px 0;
+  }
+  .file-upload-image {
+    max-height: 200px;
+    max-width: 200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /*.....thumnnails............*/
+  
+  .thumbnail-file-upload-input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .thumbail-image-upload-wrap {
+    margin-top: 20px;
+    margin-left: 40px;
+    border: 4px dashed #191c1f;
+    position: relative;
+    width: 80px;
+    height: 70px;
+  }
+  .thumbnail-drag-text {
+    text-align: center;
+  }
+  
+  .thumbnail-drag-text h3 {
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #191c1f;
+    padding: 30px 0;
+    font-size: 15px;
+  }
+  .image-dropping,
+  .thumbnail-image-upload-wrap:hover {
+    border: 4px dashed #8d9ba8;
+  }
+  
+  /*.....dashboard form............*/
+  
+  .dashboard-form {
+    margin-top: 100px;
+    width: 800px;
+    margin-left: 0px;
+  }
+  .dashboard-form .form-control {
+    margin: 10px;
+  }
+  .dash-dropdown {
+    margin: 20px 0;
+  }
+  .dashboard-form .f-1 {
+    width: 770px;
+  }
+  .addProduct-container {
+    background: #f1f1f1;
+  }
+  .form-label {
+    margin-left: 15px;
+    margin-bottom: 0;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  .add-btn-group {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .dashboard-form .form-control {
+    padding: 12px;
+  }
+  .dashboard-form .dash-dropdown {
+    margin-left: 20px;
+  }
+  .dashboard-form .dropdown {
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+  }
+  .dashboard-form .dropdown .dropdown-toggle {
+    background: #fff;
+    color: #101010;
+    border: 1px solid #fff;
+    width: 177px;
+    text-align: left;
+    font-size: 18px;
+    padding: 12px;
+    font-family: "Nunito", sans-serif;
+    margin: 0 10px 0 10px;
+  }
+  .dashboard-form .dropdown .dropdown-toggle::after {
+    content: "";
+    float: right;
+    margin-right: 10px;
+    margin-top: 8px;
+    cursor: pointer;
+  }
+  .dashboard-form.dropdown .dropdown-toggle .fa-angle-down {
+    color: red !important;
+    margin-right: 10px;
+    transition: 0.5s;
+  }
+  .dashboard-form .dropdown-menu {
+    margin-top: 5px;
+    border: 2px solid #fff;
+    width: 250px;
+  }
+  .dashboard-form.dropdown-item {
+    border-bottom: 1px solid #f6f6f6;
+    padding: 5px;
+  }
+  .dashboard-form .dropdown-item:hover {
+    background: rgb(60, 152, 36);
+    background: radial-gradient(
+      circle,
+      rgba(60, 152, 36, 1) 70%,
+      rgba(40, 136, 50, 1) 100%
+    );
+    color: #fff;
+  }
+  .dashboard-dealer {
+    margin-left: 70px;
+  }
+ .dashboard-dealer .form-control {
+  width: 400px;
+  margin-left: 10px;
+  margin-top: 5px;
+  padding: 10px;
+ }
+ .dashboard-dealer .form-label {
+
+ }
+ .dashboard-dealer h2 {
+  color: #101010;
+ }
+ .d-img {
+  margin-top: 70px;
+ }
+ .dashboard-dealer .dealer-file-upload-input {
+  margin-top: 10px;
+  margin-left: 15px;
+ }

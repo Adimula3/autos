@@ -7,6 +7,8 @@ import TopBar from "./components/top-bar";
 import SideBar from "./components/side-bar";
 import HomeSpinner from "./components/home-spinner";
 import CarListPage from "./pages/listings";
+import AddProduct from "./pages/addProduct/addProduct";
+
 
 const AdminDashboard = () => {
 
@@ -24,6 +26,9 @@ const AdminDashboard = () => {
         }
         else if (params.dash_url === "manage_listings") {
             return <CarListPage />
+        }
+        else if (params.dash_url === "add_product") {
+            return <AddProduct />
         }
 
     }

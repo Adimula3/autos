@@ -54,6 +54,13 @@ const SideBar = ({ pageName }) => {
                                     </Link>
                                 </li>
 
+                                 {/* addProduct menu */}
+                                 <li className={`menu-item ${pageName === 'add_product' ? 'active' : ''}`}>
+                                    <Link to="/admin/dashboard/add_product" className="menu-link">
+                                        <i class="fa-solid fa-plus"></i>
+                                        <span className="sidebar-text">Add Product</span>
+                                    </Link>
+                                </li>
                                 {/* view product menu */}
                                 <li className={`menu-item ${pageName === 'manage_listings' ? 'active' : ''}`}>
                                     <Link to="/admin/dashboard/manage_listings" className="menu-link">

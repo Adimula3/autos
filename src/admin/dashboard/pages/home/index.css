@@ -1,0 +1,152 @@
+.main-container {
+    background: #f1f1f1!important;
+}
+
+.dashboard-home h4 {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 0 0 20px;
+}
+.box1 {
+    background: #fff;
+    width: 700px;
+    height: 300px;
+    border-radius: 8px;
+}
+.activities {
+    margin-top: 50px;
+    gap: 30px;
+}
+.daily-views {
+    background: #fff;
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+}
+.daily-views h3 {
+    text-align: center;
+    padding: 50px 0 0 0;
+}
+.daily-views h1 {
+    text-align: center;
+    font-size: 70px;
+    padding-top: 30px;
+}
+hr {
+    margin-top: 0;
+}
+
+.daily-admin-actvity {
+    width: 800px;
+    background: #fff;
+    border-radius: 8px;
+}
+.daily-admin-actvity a {
+    color: #101010;
+    padding: 5px 0 10px 10px;
+}
+.table .table-cell {
+    font-size: 14px;
+    padding: 32px 0 25px 20px;
+}
+ .table .table-header {
+    padding: 20px 20px 20px 20px;
+}
+ .table .table-body-header {
+    padding: 18px 0 15px 20px;
+}
+ .table .table-cell .btn {
+   
+}
+.dac-box {
+    gap: 70px;
+}
+.dac-box p {
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.dac-box2 {
+    margin: 0 30px 0 30px;
+    justify-content: space-between;
+}
+.dac-box2 .dac-img {
+    height: 60px;
+    width: 100px;
+    border-radius: 8px;
+}
+.dac-box2 .btn {
+
+}
+.dac-box-head {
+  margin: 0 30px 0 30px;
+    justify-content: space-between;
+}
+.more-information {
+    padding-top: 50px;
+    gap: 30px;
+}
+.more-views {
+    background: #fff;
+    width: 300px;
+    border-radius: 8px;
+}
+.mv-box1 {
+    text-align: center;  
+    padding-top: 20px;
+    height: 180px;
+}
+.mv-box1 h1, .mv-box2 h1, .mv-box3 h1{
+
+}
+.mv-box2 {
+    text-align: center;  
+    height: 180px;
+    padding-top: 20px;
+}
+
+.mv-box3 {
+    text-align: center;  
+    height: 180px;
+    
+}
+.more-views-box {
+    height: 500px!important;
+}
+.more-views-box p{
+    color: #101010;
+   
+}
+.more-views-box span {
+    color: #8d9ba8;
+    margin-top: 0;
+    padding-top: 0;
+}
+.dealer-details-box {
+    padding-left: 0px;
+}
+.dealer-details-box .table .thead {
+    margin-left: 10px;
+}
+.dash-agents {
+    background: #fff;
+    border-radius: 8px;
+}
+.table {
+    width: 800px;
+    padding: 20px;
+}
+.table thead {
+
+}
+.agent45 {
+    height: 50px;
+    width: 50px;
+    border-radius: 8px;
+}
+
+.table span {
+    color: #101010;
+    margin-left: 20px;
+}
+
+
