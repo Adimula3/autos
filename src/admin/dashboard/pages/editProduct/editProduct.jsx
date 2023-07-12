@@ -5,7 +5,7 @@ import DashSpinner from "../../components/dash-spinner";
 import { useState } from "react";
 import "../addProduct/addProduct.css";
 
-function AddProduct(props) {
+function EditProduct(props) {
   // eslint-disable-next-line
   const [loading, setLoading] = useState(false);
 
@@ -19,7 +19,7 @@ function AddProduct(props) {
           <div id="category-container" className="main-container">
             {/* start your coding from here you can give the div any class name oooo*/}
             <div className="container-start">
-              <h2>Add Product</h2>
+              <h2>Edit Product</h2>
               <div className="add-product">
                 <h4>Product Details</h4>
                 <div>
@@ -449,4 +449,4 @@ function AddProduct(props) {
   );
 }
 
-export default AddProduct;
+export default EditProduct;

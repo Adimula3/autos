@@ -8,6 +8,9 @@ import SideBar from "./components/side-bar";
 import HomeSpinner from "./components/home-spinner";
 import CarListPage from "./pages/listings";
 import AddProduct from "./pages/addProduct/addProduct";
+import EditProduct from "./pages/editProduct/editProduct";
+import AddDealer from "./pages/dealers/addDealer";
+import Testimonials from "./pages/testimonials/testimonials";
 
 
 const AdminDashboard = () => {
@@ -30,6 +33,19 @@ const AdminDashboard = () => {
         else if (params.dash_url === "add_product") {
             return <AddProduct />
         }
+        else if (params.dash_url === "edit_product") {
+            return <EditProduct />
+        }
+        else if (params.dash_url === "add_dealer") {
+            return <AddDealer />
+        }
+        else if (params.dash_url === "testimonials") {
+            return <Testimonials />
+        }
+       
+       
+        
+        
 
     }
 

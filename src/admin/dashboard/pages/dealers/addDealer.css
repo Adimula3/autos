@@ -1,0 +1,63 @@
+
+.container-start h2 {
+    color: #101010;
+    font-size: 22px;
+    margin-bottom: 50px;
+  }
+  .add-dealer {
+    margin-left: 50px;
+  }
+.add-dealer h4 {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+  .add-dealer-details {
+   background: #fff;
+   padding: 20px 0 20px 30px;
+   border-radius: 5px;
+  }
+  .car-details-table {
+    margin-left: 100px;
+    margin-top: 30px;
+    border: 5px solid #1c1e22;;
+    width: 750px;
+    justify-content: space-between;
+}
+.dealer-list {
+    background: #fff;
+    width: 500px;
+    padding: 20px 20px 30px 20px;
+    margin-left: 150px;
+}
+
+.add-dealer .table-cell {
+    color: #101010;
+    font-size: 14px;
+    padding: 0 0 0 30px;
+  } 
+  .add-dealer .table-head {
+    color: #101010;
+    font-size: 15px;
+    padding: 0 0 0 30px;
+    font-weight: 400;
+  }
+  .add-dealer .fa-x {
+    margin-top: 30px;
+    color: red;
+    margin-left: 20px;
+  }
+  .form-group .fa-brands {
+    font-size: 20px;
+  }
+  .form-group .fa-twitter {
+    color: #1DA1F2;
+  }
+  .form-group .fa-whatsapp {
+    color: #25D366;
+  }
+  .form-group .fa-facebook-f {
+    color:#1877F2;
+  }
+  .form-group .fa-instagram{
+    color: #C13584;
+  }
