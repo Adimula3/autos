@@ -25,8 +25,9 @@ function Specification({ autoData }) {
     WARRANTY: autoData.Warranty,
   };
   return (
-    <div>
-      <table className="car-details-table">
+
+    <div className='car-spec'>
+      <table className="table">
         <tbody>
           {Object.entries(carSpecifications).map(([key, value]) => (
             <tr key={key}>
@@ -37,6 +38,7 @@ function Specification({ autoData }) {
         </tbody>
       </table>
     </div>
+
   );
 }
 

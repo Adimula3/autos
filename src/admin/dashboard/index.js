@@ -6,11 +6,12 @@ import DashboardHome from "./pages/home";
 import TopBar from "./components/top-bar";
 import SideBar from "./components/side-bar";
 import HomeSpinner from "./components/home-spinner";
-import CarListPage from "./pages/listings";
-import AddProduct from "./pages/addProduct/addProduct";
-import EditProduct from "./pages/editProduct/editProduct";
-import AddDealer from "./pages/dealers/addDealer";
-import Testimonials from "./pages/testimonials/testimonials";
+import DealersPage from "./pages/dealers";
+import Testimonials from "./pages/testimonials";
+import ProfileSettings from "./pages/settings/profile";
+import StoreSettings from "./pages/settings";
+import AddProduct from "./pages/products";
+import ManageProducts from "./pages/products/manage_auto";
 
 
 const AdminDashboard = () => {
@@ -27,25 +28,28 @@ const AdminDashboard = () => {
         if (params.dash_url === "home") {
             return <DashboardHome />
         }
-        else if (params.dash_url === "manage_listings") {
-            return <CarListPage />
-        }
-        else if (params.dash_url === "add_product") {
+
+        else if (params.product_url === "add") {
             return <AddProduct />
         }
-        else if (params.dash_url === "edit_product") {
-            return <EditProduct />
+        else if (params.product_url === "manage") {
+            return <ManageProducts />
         }
-        else if (params.dash_url === "add_dealer") {
-            return <AddDealer />
+
+        else if (params.dash_url === "auto_dealers") {
+            return <DealersPage />
         }
         else if (params.dash_url === "testimonials") {
             return <Testimonials />
         }
-       
-       
-        
-        
+
+        else if (params.settings_url === "profile") {
+            return <ProfileSettings  />
+        }
+
+        else if (params.settings_url === "business") {
+            return <StoreSettings  />
+        }
 
     }
 
@@ -72,12 +76,12 @@ const AdminDashboard = () => {
 
                             <TopBar />
                             <div className="main-wrap">
-                                <SideBar pageName={params.dash_url} />
+                                <SideBar pageName={params.dash_url || params.product_url || params.settings_url} />
                                 <div id="main-body" className="main-body">
                                     {pages()}
                                 </div>
                             </div>
-                        </div>
+                        </div> 
 
                     </>
                 )}

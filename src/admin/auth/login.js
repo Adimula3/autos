@@ -44,6 +44,7 @@ const AdminLogin = () => {
                                         type="email"
                                         id="email"
                                         value={email}
+                                        data-inputmask="'alias': 'email'"
                                         onChange={onChange}
                                         required={true}
                                         className="form-control"

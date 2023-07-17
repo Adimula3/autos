@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { autoDatas } from "../data/data";
 import "../styles/productDetails.css";
 import Description from "../component/description";
-import Feature from "../component/feature";
 import Specification from "../component/specification";
 import Header from "../component/header";
 import Footer from "../component/footer";
@@ -11,25 +10,17 @@ import agent1 from "../assets/agent-demo.jpeg";
 function ProductDetails() {
   const [autoData, setAutoData] = useState([]);
   const [showDescription, setShowDescription] = useState(true);
-  const [showFeatures, setShowFeatures] = useState(false);
   const [showSpecification, setShowSpecification] = useState(false);
 
   const [mainImage, setMainImage] = useState(null);
 
   const handleDescriptionClick = () => {
     setShowDescription(true);
-    setShowFeatures(false);
     setShowSpecification(false);
   };
 
-  const handleFeaturesClick = () => {
-    setShowDescription(false);
-    setShowFeatures(true);
-    setShowSpecification(false);
-  };
   const handleSpecificationClick = () => {
     setShowDescription(false);
-    setShowFeatures(false);
     setShowSpecification(true);
   };
 
@@ -52,32 +43,36 @@ function ProductDetails() {
 
   return (
     <>
-      <div className="heads">
-        <Header />
-      </div>
-      <div className="product-details">
-        <div className="auto-title">
-          <h2>{autoData ? autoData.title : ""}</h2>
-          <p>Home / {autoData ? autoData.title : ""}</p>
-        </div>
-        <div className="product-details-content">
-          <div className="p-d-c d-flex">
-            <div className="p-d-c-l">
-              <div className="">
-                <div className="p-d d-flex">
-                  <div className="product-name-price d-flex">
-                    <p>{autoData ? autoData.title : ""}</p>
-                    <span>{autoData ? autoData.price : ""}</span>
-                  </div>
-                </div>
-                <div className="product-light-box">
-                  <img
-                    className="product1"
-                    src={autoData ? mainImage : ""}
-                    alt=""
-                  />
 
-                  <div className="thumbnail d-flex">
+      <Header />
+
+      <div className="product-details">
+        <div className="container">
+
+          <div className="auto-details-header">
+            <h2 className="auto-title">{autoData ? autoData.title : ""}</h2>
+            <p className="auto-link">Home / {autoData ? autoData.title : ""}</p>
+          </div>
+
+          <div className="auto-details-wrapper">
+            <div className="row">
+              <div className="col-md-8">
+                <div className="auto-details-box">
+
+                  <div className="auto-header">
+                    <p className="auto-title">{autoData ? autoData.title : ""}</p>
+                    <p className="auto-price">&#8358; {autoData ? autoData.price : ""}</p>
+                  </div>
+
+                  <div className="auto-main-box">
+                    <img
+                      className="img-fluid"
+                      src={autoData ? mainImage : ""}
+                      alt=""
+                    />
+                  </div>
+
+                  <div className="auto-thumbnail">
                     {autoData &&
                       autoData.productImages &&
                       autoData.productImages.map((productImage, index) => (
@@ -86,71 +81,101 @@ function ProductDetails() {
                           onClick={() => {
                             setMainImage(productImage);
                           }}
-                          className={`thumb ${
-                            mainImage === productImage ? "active" : ""
-                          }`}
+                          className={`thumb ${mainImage === productImage ? "active" : ""
+                            }`}
                         >
                           <img src={productImage} alt="" />
                         </div>
                       ))}
                   </div>
+
+
+
+                  <div className="product-specific-details">
+                    <p onClick={handleDescriptionClick}>DESCRIPTION</p>
+                    <p onClick={handleSpecificationClick}>SPECIFICATION</p>
+                  </div>
+                  <div className="">
+                    {showDescription && <Description autoData={autoData} />}
+                    {showSpecification && <Specification autoData={autoData} />}
+                  </div>
+
                 </div>
+
               </div>
-              <div className="product-specific-details d-flex">
-                <p onClick={handleDescriptionClick}>DESCRIPTION</p>
-                <p onClick={handleFeaturesClick}>FEATURES</p>
-                <p onClick={handleSpecificationClick}>SPECIFICATION</p>
-              </div>
-              <div className="">
-                {showDescription && <Description autoData={autoData} />}
-                {showFeatures && <Feature />}
-                {showSpecification && <Specification autoData={autoData} />}
-              </div>
-            </div>
-            <div className="p-d-c-r">
-              <div className="mile-details">
-                <h2>Ready to get your car?</h2>
-                <p className="m-p">
-                  Contact our agent for a test drive and negotiations:
-                </p>
-                <div className="seller-details">
-                  <div className="seller ">
-                    <img src={agent1} alt="" className="seller-img" />
-                    <div>
-                      <p className="agent-name"> John Doe mcclane</p>
-                      <div className="agent-socials d-flex">
-                        <i className="fa-brands fa-instagram"></i>
-                        <i className="fa-brands fa-facebook-f"></i>
-                        <i className="fa-brands fa-twitter"></i>
+
+              <div className="col-md-4">
+                <div className="mile-details">
+                  <h2>Ready to get your car?</h2>
+
+                  <p className="m-p">
+                    Contact our agent for a Test Drive and Negotiations
+                  </p>
+                  <div className="seller-details">
+                    <div className="seller-profile">
+                      <img src={agent1} alt="" className="seller-img" />
+                      <div className="profile-details">
+                        <p className="agent-name"> John Doe mcclane</p>
+                        <div className="agent-socials">
+                            <ul>
+                                <li>
+                                    <a href="https://instagram.com"> </a>
+                                    <i className="fa-brands fa-instagram"></i>
+                                </li>
+                                <li>
+                                    <a href="https://facebook.com"> </a>
+                                    <i className="fa-brands fa-facebook-f"></i>
+                                </li>
+                                <li>
+                                    <a href="https://whatsapp.com"> </a>
+                                    <i className="fa-brands fa-whatsapp"></i>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com"> </a>
+                                    <i className="fa-brands fa-twitter"></i>
+                                </li>
+                            </ul>
+                        </div>
                       </div>
+
                     </div>
-                  </div>
-                  <div className="call-details">
-                    <div className="c-details d-flex">
-                      <span>
-                        <i class="fa-solid fa-phone"></i>
-                      </span>
-                      <p className="phone"> +1 123-456-7890</p>
-                    </div>
-                    <div className="c-details d-flex">
-                      <span>
-                        <i class="fa-brands fa-whatsapp"></i>
-                      </span>
-                      <p className="whatsapp"> +1 123-456-7890</p>
-                    </div>
-                    <div className="c-details d-flex">
-                      <span>
-                        <i class="fa-solid fa-envelope"></i>
-                      </span>
-                      <p className="mail">Send Mail</p>
+
+                    <div className="call-details">
+
+                      <div className="c-details d-flex">
+                        <span className="icon-section phone">
+                          <i class="fa-solid fa-phone"></i>
+                        </span>
+                        <p className="icon-title phone"> Call Agent </p>
+                      </div>
+
+                      <div className="c-details d-flex">
+                        <span>
+                          <i class="fa-brands fa-whatsapp"></i>
+                        </span>
+                        <p className="whatsapp"> Message Agent</p>
+                      </div>
+
+                      <div className="c-details d-flex">
+                        <span>
+                          <i class="fa-solid fa-envelope"></i>
+                        </span>
+                        <p className="mail">Mail Agent </p>
+                      </div>
+
                     </div>
                   </div>
                 </div>
               </div>
+
             </div>
+
           </div>
+
         </div>
-      </div>
+
+      </div >
+
       <Footer />
     </>
   );

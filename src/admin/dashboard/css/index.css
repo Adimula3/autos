@@ -1,0 +1,338 @@
+.dealer-wrapper {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.dealer-form {
+
+    border-radius: 20px;
+    padding: 25px 30px;
+
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.4);
+}
+
+.dealer-wrapper h4 {
+    font-size: 18px;
+    color: #979fa1;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+
+
+.dealer-form .form-group {
+    margin: 20px 0;
+}
+
+.dealer-form .form-group .form-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #979fa1;
+    margin-bottom: 8px;
+}
+
+.dealer-form .form-group input {
+    background: transparent;
+    border: 1px solid #979fa1;
+    height: 47px;
+    font-size: 14px;
+    color: #f7f7f7;
+    border-radius: 5px;
+}
+
+.dealer-form .form-group input:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #01abae;
+}
+
+
+
+
+.dealer-form .form-group textarea {
+    background: transparent;
+    border: 1px solid #979fa1;
+    font-size: 14px;
+    color: #f7f7f7;
+    border-radius: 5px;
+}
+
+.dealer-form .form-group textarea:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #01abae;
+}
+
+
+
+
+
+.dealer-form .form-group .form-inline {
+    display: flex;
+    border: 1px solid #979fa1;
+    height: 47px;
+    border-radius: 5px;
+
+}
+
+.dealer-form .form-group .form-inline .fa-brands {
+    margin: auto;
+    padding: 0 10px;
+}
+
+.dealer-form .form-group .form-inline input {
+    background: transparent;
+    border: 0 solid #979fa1;
+    height: 47px;
+    font-size: 14px;
+}
+
+
+
+.dealer-form .image-placeholder {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+}
+
+.dealer-form .placeholder-container {
+    margin-top: 5px;
+    height: 120px;
+    width: 120px;
+    cursor: pointer;
+}
+
+.dealer-form .placeholder-container .img-fluid {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.dealer-form .form-group.form-btn {
+    text-align: right;
+}
+
+.dealer-form .form-group .btn {
+    margin-top: 20px;
+    border: 1px solid #01abaee2;
+    background: #01abaee2;
+    padding: 10px 50px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.dealer-form .form-group .fa-brands {
+    font-size: 20px;
+}
+
+.dealer-form .form-group .fa-twitter {
+    color: #1DA1F2;
+}
+
+.dealer-form .form-group .fa-whatsapp {
+    color: #25D366;
+}
+
+.dealer-form .form-group .fa-facebook-f {
+    color: #1877F2;
+}
+
+.dealer-form .form-group .fa-instagram {
+    color: #C13584;
+}
+
+
+/* ====================== dealers list ==================== */
+
+.manage-dealers {
+    border-radius: 20px;
+    padding: 25px 20px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.4);
+}
+
+.dealers-list {
+    padding: 20px 0;
+}
+
+.dealer-list-box {
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #777777a0;
+    margin-bottom: 30px;
+    padding: 10px 0;
+
+}
+
+.dealer-list-box .dealer-list-info {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+}
+
+
+.dealer-list-box .dealer-list-info .dealer-list-img {
+    height: 70px;
+    width: 70px;
+
+}
+
+.dealer-list-box .dealer-list-info .dealer-list-img .img-fluid {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid #8d9ba8;
+}
+
+
+
+.dealer-list-box .dealer-list-info .dealer-list-profile {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.dealer-list-box .dealer-list-info .dealer-list-profile p {
+    margin: 0;
+    padding: 0;
+}
+
+.dealer-list-box .dealer-list-info .dealer-list-profile .name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #8d9ba8;
+}
+
+.dealer-list-box .dealer-list-info .dealer-list-profile .email {
+    font-size: 13px;
+    font-weight: 400;
+    color: #979fa1;
+}
+
+
+
+.dealer-list-box .dealer-action-buttons {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.dealer-list-box .dealer-action-buttons .btn {
+    width: 100%;
+    color: #fff;
+    border-radius: 25px;
+    border: 0 solid transparent;
+    font-size: 13px;
+    font-weight: 500;
+
+    letter-spacing: 0.5px;
+
+
+
+}
+
+.dealer-list-box .dealer-action-buttons .btn.btn-primary {
+    background: #0d6efd;
+    border: 1px solid #0d6efd;
+}
+
+.dealer-list-box .dealer-action-buttons .btn.btn-danger {
+    background: #dc3545;
+    border: 1px solid #dc3545;
+}
+
+
+/* testimony box section */
+
+
+.dealer-list-box.testimony-box .dealer-list-profile {
+    width: 80%;
+}
+
+.dealer-list-box.testimony-box .dealer-action-buttons {
+    width: 40%;
+}
+
+.dealer-list-box.testimony-box .dealer-list-profile .name {
+    margin-bottom: 8px;
+}
+
+.dealer-list-box.testimony-box .dealer-list-profile .desc {
+    font-size: 13px;
+    font-weight: 400;
+    color: #979fa1;
+
+}
+
+.dealer-list-box.testimony-box .dealer-list-profile .desc span {
+    font-size: 13px;
+    font-weight: 400;
+    color: #979fa1;
+    padding: 0 5px;
+}
+
+/* empty box section */
+.empty-box {
+    text-align: center;
+    padding: 50px 30px;
+    border-bottom: 1px solid #777777a0;
+}
+
+.empty-box h3 {
+    font-size: 17px;
+    color: #979fa1;
+    font-weight: 600;
+}
+
+
+
+
+.container-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+
+
+.container-header p {
+    font-size: 18px;
+    color: #979fa1;
+    font-weight: 600;
+    margin-top: auto;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.container-header .btn {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #979fa1;
+    border: 0px solid #111315;
+    background: #111315;
+    padding: 9px 25px;
+    border-radius: 20px;
+
+
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
+}
+
+.container-header .btn:hover {
+    background: #22262a;
+}
+
+.container-header .btn:focus {
+    color: #979fa1;
+    border: 0px solid #111315;
+    background: #111315;
+}

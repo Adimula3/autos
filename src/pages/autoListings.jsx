@@ -7,7 +7,7 @@ import Footer from "../component/footer";
 import { autoDatas } from "../data/data";
 
 function AutoListings() {
-  const [displayCount, setDisplayCount] = useState(3);
+  const [displayCount, setDisplayCount] = useState(4);
   const [selectedYear, setSelectedYear] = useState("All");
   const [selectedMake, setSelectedMake] = useState("All Makes");
   const [selectedFuelType, setSelectedFuelType] = useState("All Fuel Types");
@@ -50,22 +50,22 @@ function AutoListings() {
     selectedCondition === "All Conditions"
       ? makeFilteredListings
       : makeFilteredListings.filter(
-          (listing) => listing.condition === selectedCondition
-        );
+        (listing) => listing.condition === selectedCondition
+      );
 
   const transmissionFilteredListings =
     selectedTransmission === "All Transmissions"
       ? conditionFilteredListings
       : conditionFilteredListings.filter(
-          (listing) => listing.transmission === selectedTransmission
-        );
+        (listing) => listing.transmission === selectedTransmission
+      );
 
   const fuelTypeFilteredListings =
     selectedFuelType === "All Fuel Types"
       ? transmissionFilteredListings
       : transmissionFilteredListings.filter(
-          (listing) => listing.fuel === selectedFuelType
-        );
+        (listing) => listing.fuel === selectedFuelType
+      );
 
   const displayedListings = fuelTypeFilteredListings.slice(0, displayCount);
 
@@ -75,124 +75,79 @@ function AutoListings() {
   };
 
   return (
-    <div>
+    <>
       <div className="heads">
         <Header />
       </div>
+
       <div className="auto-listings">
-        <h2 className="aut-title">Auto Listings</h2>
-        <p className="aut-link">Home / Auto Listings</p>
+        <div className="container">
+          <div className="auto-listings-header">
+            <h2 className="auto-title">Auto Listings</h2>
+            <p className="auto-link">Home / Auto Listings</p>
+          </div>
 
-        <div className="auto-listings-details d-flex">
-          <div className="autos">
-            <div className="autos-sort d-flex">
-              <div className="show-on-page d-flex">
-                <p>SHOW ON PAGE</p>
-                <Dropdown>
-                  <Dropdown.Toggle variant="primary">
-                    {displayCount} Autos
-                  </Dropdown.Toggle>
-                  <Dropdown.Menu>
-                    <Dropdown.Item onClick={() => setDisplayCount(5)}>
-                      5
-                    </Dropdown.Item>
-                    <Dropdown.Item onClick={() => setDisplayCount(6)}>
-                      6
-                    </Dropdown.Item>
-                    <Dropdown.Item onClick={() => setDisplayCount(7)}>
-                      7
-                    </Dropdown.Item>
-                    <Dropdown.Item
-                      onClick={() => setDisplayCount(autoDatas.length)}
-                    >
-                      All
-                    </Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-              </div>
-              <div className="sort-by d-flex">
-                <p>SORT BY</p>
-                <Dropdown>
-                  <Dropdown.Toggle variant="primary">Year</Dropdown.Toggle>
-                  <Dropdown.Menu>
-                    <Dropdown.Item onClick={() => handleYearSelection("2010")}>
-                      2010
-                    </Dropdown.Item>
-                    <Dropdown.Item onClick={() => handleYearSelection("2020")}>
-                      2020
-                    </Dropdown.Item>
-                    <Dropdown.Item onClick={() => handleYearSelection("2014")}>
-                      2014
-                    </Dropdown.Item>
-                    <Dropdown.Item onClick={() => handleYearSelection("All")}>
-                      All
-                    </Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-              </div>
-              <div>
-                <i class="fa-solid fa-list" onClick={handleIconClick}></i>
-              </div>
-            </div>
-            <div className="a-d-s d-flex">
-              <div>
-                {displayedListings.map((listing, index) => (
-                  <div className="auto-sepcifications d-flex">
-                    <div className="auto-spec-img-box">
-                      <img
-                        src={listing.src}
-                        alt=""
-                        className="auto-spec-image"
-                      />
-                    </div>
+          <div className="auto-listings-section">
+            <div className="row">
+              <div className="col-md-12">
 
-                    <div className="auto-spec-details">
-                      <Link to={`/productDetails/${listing.id}`}>
-                        <h3>{listing.title}</h3>
-                      </Link>
-                      <p className="aut-sp-p">{listing.about}</p>
-                      <div className="aut-sp-d d-flex">
-                        <div className="aut-sp-1">
-                          <p>
-                            AUTO MAKE : <span>{listing.autoMake}</span>
-                          </p>
-                          <p>
-                            YEAR : <span> {listing.year}</span>
-                          </p>
-                          <p>
-                            FUEL : <span>{listing.fuel}</span>
-                          </p>
-                          <p>
-                            TRANSMISSION :<span>{listing.transmission}</span>
-                          </p>
-                        </div>
-                        <div className="aut-sp-2">
-                          <p>
-                            AUTO VERSION : <span>{listing.autoVersion}</span>
-                          </p>
-                          <p>
-                            MILEAGE : <span> {listing.mileage}</span>
-                          </p>
-                          <p>
-                            HORSEPOWER :<span>{listing.horsePower}</span>
-                          </p>
-                          <p>
-                            DRIVE :<span>{listing.Drive}</span>
-                          </p>
-                        </div>
-                        <div className="aut-sp-3">
-                          <h3>PRICE:</h3>
-                          <p>{listing.price}</p>
-                        </div>
-                      </div>
-                    </div>
+                <div className="autos-sort">
+                  <div className="show-on-page d-flex">
+                    <p>SHOW ON PAGE</p>
+                    <Dropdown>
+                      <Dropdown.Toggle variant="primary">
+                        {displayCount} Autos
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu>
+                        <Dropdown.Item onClick={() => setDisplayCount(5)}>
+                          5
+                        </Dropdown.Item>
+                        <Dropdown.Item onClick={() => setDisplayCount(6)}>
+                          6
+                        </Dropdown.Item>
+                        <Dropdown.Item onClick={() => setDisplayCount(7)}>
+                          7
+                        </Dropdown.Item>
+                        <Dropdown.Item
+                          onClick={() => setDisplayCount(autoDatas.length)}
+                        >
+                          All
+                        </Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
                   </div>
-                ))}
-              </div>
-              <div>
-                {isAutoRangeSortVisible && (
-                  <div className="auto-range-sort">
-                    <h4>BY MAKE</h4>
+
+                  <div className="sort-by d-flex">
+                    <p>SORT BY</p>
+                    <Dropdown>
+                      <Dropdown.Toggle variant="primary">Year</Dropdown.Toggle>
+                      <Dropdown.Menu>
+                        <Dropdown.Item
+                          onClick={() => handleYearSelection("2010")}
+                        >
+                          2010
+                        </Dropdown.Item>
+                        <Dropdown.Item
+                          onClick={() => handleYearSelection("2020")}
+                        >
+                          2020
+                        </Dropdown.Item>
+                        <Dropdown.Item
+                          onClick={() => handleYearSelection("2014")}
+                        >
+                          2014
+                        </Dropdown.Item>
+                        <Dropdown.Item
+                          onClick={() => handleYearSelection("All")}
+                        >
+                          All
+                        </Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  </div>
+
+                  <div className="sort-by d-flex">
+                    <p >By Make</p>
                     <Dropdown>
                       <Dropdown.Toggle variant="primary">
                         {selectedMake}
@@ -235,73 +190,10 @@ function AutoListings() {
                         </Dropdown.Item>
                       </Dropdown.Menu>
                     </Dropdown>
-                    <Dropdown>
-                      <Dropdown.Toggle variant="primary">
-                        All Models
-                      </Dropdown.Toggle>
-                      <Dropdown.Menu>
-                        <Dropdown.Item href="#action1">All</Dropdown.Item>
-                      </Dropdown.Menu>
-                    </Dropdown>
-                    <div className="year-range">
-                      <label for="customRange3" className="form-label">
-                        YEAR RANGE
-                      </label>
-                      <input
-                        type="range"
-                        className="form-range"
-                        min="0"
-                        max="5"
-                        step="0.5"
-                        id="customRange3"
-                      ></input>
-                    </div>
-                    <div className="price-range">
-                      <label for="customRange3" className="form-label">
-                        PRICE RANGE
-                      </label>
-                      <input
-                        type="range"
-                        className="form-range"
-                        min="0"
-                        max="5"
-                        step="0.5"
-                        id="customRange3"
-                      ></input>
-                    </div>
-                    <h5>FUEL TYPE</h5>
-                    <Dropdown>
-                      <Dropdown.Toggle variant="primary">
-                        {selectedFuelType}
-                      </Dropdown.Toggle>
-                      <Dropdown.Menu>
-                        <Dropdown.Item
-                          onClick={() =>
-                            handleFuelTypeSelection("All Fuel Types")
-                          }
-                        >
-                          All FuelType
-                        </Dropdown.Item>
-                        <Dropdown.Item
-                          onClick={() => handleFuelTypeSelection("petrol")}
-                        >
-                          Petrol
-                        </Dropdown.Item>
-                        <Dropdown.Item
-                          onClick={() => handleFuelTypeSelection("diesel")}
-                        >
-                          Diesel
-                        </Dropdown.Item>
-                        <Dropdown.Item
-                          onClick={() =>
-                            handleFuelTypeSelection("plugin electric")
-                          }
-                        >
-                          Plugin Electric
-                        </Dropdown.Item>
-                      </Dropdown.Menu>
-                    </Dropdown>
-                    <h5>TRANSMISSION TYPE</h5>
+                  </div>
+
+                  <div className="sort-by d-flex">
+                    <p>TRANSMISSION TYPE</p>
                     <Dropdown>
                       <Dropdown.Toggle variant="primary">
                         {selectedTransmission}
@@ -335,7 +227,45 @@ function AutoListings() {
                         </Dropdown.Item>
                       </Dropdown.Menu>
                     </Dropdown>
-                    <h5>CONDITION</h5>
+                  </div>
+
+                  <div className="sort-by d-flex">
+                    <p>FUEL TYPE</p>
+                    <Dropdown>
+                      <Dropdown.Toggle variant="primary">
+                        {selectedFuelType}
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu>
+                        <Dropdown.Item
+                          onClick={() =>
+                            handleFuelTypeSelection("All Fuel Types")
+                          }
+                        >
+                          All FuelType
+                        </Dropdown.Item>
+                        <Dropdown.Item
+                          onClick={() => handleFuelTypeSelection("petrol")}
+                        >
+                          Petrol
+                        </Dropdown.Item>
+                        <Dropdown.Item
+                          onClick={() => handleFuelTypeSelection("diesel")}
+                        >
+                          Diesel
+                        </Dropdown.Item>
+                        <Dropdown.Item
+                          onClick={() =>
+                            handleFuelTypeSelection("plugin electric")
+                          }
+                        >
+                          Plugin Electric
+                        </Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  </div>
+
+                  <div className="sort-by d-flex">
+                    <p>CONDITION</p>
                     <Dropdown>
                       <Dropdown.Toggle variant="primary">
                         {selectedCondition}
@@ -366,15 +296,92 @@ function AutoListings() {
                       </Dropdown.Menu>
                     </Dropdown>
                   </div>
-                )}
+
+                  <div>
+                    <i class="fa-solid fa-list" onClick={handleIconClick}></i>
+                  </div>
+
+                </div>
+
+                <hr />
               </div>
             </div>
+
+            <div className="auto-wrapper">
+
+              <div className="row">
+                {displayedListings.map((listing, index) => (
+                  <div className="col-md-6" key={index}>
+                    <div className="auto-car-box">
+                      <div className="auto-car-img-box">
+                        <img
+                          src={listing.src}
+                          alt=""
+                          className="auto-car-image"
+                        />
+                      </div>
+
+                      <div className="auto-car-details">
+                        <Link className="link" to={`/productDetails/${listing.id}`}>
+                          <h3 className="auto-name">{listing.title}</h3>
+                        </Link>
+
+                        <p className="auto-about">{listing.about.length <= 50 ?
+                          (`${listing.about}`) : (`${listing.about.slice(0, 80)}...`)}
+                        </p>
+
+                        <p className="auto-price"> &#8358; {listing.price}</p>
+
+
+                        <div className="auto-car-info">
+
+                          <div className="aut-info-one">
+                            <p>
+                              AUTO MAKE : <span>{listing.autoMake}</span>
+                            </p>
+                            <p>
+                              YEAR : <span> {listing.year}</span>
+                            </p>
+                            <p>
+                              FUEL : <span>{listing.fuel}</span>
+                            </p>
+                            <p>
+                              TRANSMISSION :<span>{listing.transmission}</span>
+                            </p>
+                          </div>
+
+                          <div className="aut-info-two">
+                            <p>
+                              AUTO VERSION : <span>{listing.autoVersion}</span>
+                            </p>
+                            <p>
+                              MILEAGE : <span> {listing.mileage}</span>
+                            </p>
+                            <p>
+                              HORSEPOWER : <span>{listing.horsePower}</span>
+                            </p>
+                            <p>
+                              DRIVE : <span>{listing.Drive}</span>
+                            </p>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                ))}
+              </div>
+
+            </div>
+
           </div>
+
         </div>
       </div>
 
       <Footer />
-    </div>
+    </>
   );
 }
 

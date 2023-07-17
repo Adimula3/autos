@@ -1,101 +1,195 @@
+.header {
+  background: #111315;
+} 
+
+/* dark shades
+#111315
+#0c0e0f
+#080909 */
+
+/* blue one : #050A30;
+blue two: #000C66;  
+blue three: #000080; */
+
 .hedaer-contact {
-  padding: 50px 150px 50px 150px;
-}
-.hedaer-contact .welcome {
+  padding: 30px 40px;
   font-family: "Nunito", sans-serif;
+}
+
+.hedaer-contact hr {
+  border-color: #777777;
+  width: 90%;
+  text-align: center;
+  margin: 40px auto 20px;
+}
+
+.hedaer-contact .welcome {
   color: #8d9ba8;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
+
+
 .header-socials {
-  padding-left: 300px;
-  padding-right: 50px;
+  padding: 0 20px;
 }
+
+.header-socials ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+}
+
+.header-socials ul li {
+  padding: 0 15px;
+  cursor: pointer;
+}
+
 .header-socials .fa-brands {
   font-size: 23px;
-  padding-right: 15px;
   color: #8d9ba8;
 }
 
 .header-socials .fa-whatsapp:hover {
   color: #25d366;
 }
+
 .header-socials .fa-instagram:hover {
   color: #c13584;
 }
+
 .header-socials .fa-facebook-f:hover {
   color: #1877f2;
 }
+
 .header-socials .fa-twitter:hover {
   color: #1da1f2;
 }
+
+
 .hedaer-contact .btn {
-  margin-right: 30px;
-  background: rgb(60, 152, 36);
-  background: radial-gradient(
-    circle,
-    rgba(60, 152, 36, 1) 70%,
-    rgba(40, 136, 50, 1) 100%
-  );
-  font-family: "Nunito", sans-serif;
-  border: 1px solid #1d4c2e;
-  padding: 10px 40px 10px 40px;
+  background: #01abae;
+  border: 1px solid #01abae;
+  font-size: 15px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 10px 30px;
+
 }
+
+
 .header-info {
-  padding: 0 150px 50px 10px;
-  justify-content: space-evenly;
+  padding: 0 30px 30px;
 }
-.header-info .h-infos {
+
+.header-info .header-logo .logo-link {
+  text-decoration: none;
+  display: flex;
+}
+
+.header-info .header-logo img {
+  width: 35px;
+  border: 1px solid #8d9ba8;
+  padding: 2px 3px;
+  margin-right: 8px;
+  border-radius: 3px;
+}
+
+.header-info .header-logo h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+  padding-bottom: 0;
   color: #8d9ba8;
 }
-.header-info .h-infos span {
+
+.header-info .header-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+
+.header-details .h-infos {
+  color: #8d9ba8;
+}
+
+.header-details .h-infos span {
   padding-top: 0;
   margin-top: 0;
   font-size: 14px;
   color: #8d9ba8;
-  font-family: "Nunito", sans-serif;
 }
-.header-info .h-infos h4 {
+
+.header-details .h-infos h4 {
   font-size: 18px;
   font-weight: 600;
-  font-family: "Nunito", sans-serif;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
-.header-info .h-infos .fa-solid {
+
+.header-details .h-infos .fa-solid {
   font-size: 20px;
 }
-.header-info .fa-envelope {
+
+.header-details .fa-envelope {
   font-size: 40px;
   margin-right: 10px;
 }
-.header-info h2 {
-  font-family: "Nunito", sans-serif;
-}
+
+
+
+
 .header .navbar {
-  padding-left: 120px;
-  background: #24262b;
+  padding: 10px 50px;
+  background: #0c0e0f;
 }
+
 .header .navbar .navbar-nav {
-  gap: 80px;
+  gap: 50px;
 }
+
 .header .navbar .nav-link {
   color: #8d9ba8;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 8px 15px;
 }
+
 .header .navbar .nav-link:hover {
   color: #ffff;
-  background: #2d3035;
+  background: #24262b;
+  border-radius: 3px;
+
 }
+
 .nav-brand {
   display: none;
 }
+
 /* Mobile View */
 @media only screen and (max-width: 767px) {
   .header {
     position: relative;
   }
+
   .hedaer-contact {
     display: none !important;
   }
+
   .header-info {
     display: none !important;
   }
+
   .navbar-nav {
     position: absolute;
     background-color: #07030a;
@@ -117,35 +211,43 @@
     margin-left: 65px;
     border: 2px solid #8d9ba8;
   }
+
   .navbar-toggler:active {
     border: 2px solid #8d9ba8 !important;
   }
+
   .fa-bars,
   .fa-x {
     font-size: 30px;
     color: #8d9ba8;
   }
+
   @keyframes appear {
     0% {
       opacity: 0;
       translate: -30px 0;
     }
+
     100% {
       opacity: 1;
     }
   }
+
   .nav-link {
     margin: 0;
     padding: 0;
     cursor: pointer;
   }
+
   .mobile-logo {
     height: 30px;
     width: 50px;
   }
+
   .header .navbar {
     padding-left: 0;
   }
+
   .header .nav-brand {
     color: #8d9ba8;
     display: block;

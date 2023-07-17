@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../styles/home.css";
 import Carousel from "react-bootstrap/Carousel";
-import { Dropdown, Row, Col, Container } from "react-bootstrap";
 import Footer from "../component/footer";
 import agent1 from "../assets/agent-demo.jpeg";
 import Header from "../component/header";
@@ -23,7 +22,7 @@ function Home() {
       text: "Duis aute irure dolor in reprehenderit in voluptate velit ese cillum dolore fugiat nulla pariatur excepteur sint occaecat cupidatat non proident..",
     },
   ];
- 
+
   const [activeId, setActiveId] = useState(1);
 
   const onClick = (id) => setActiveId(id);
@@ -35,7 +34,7 @@ function Home() {
       </div>
 
       <div className="containers">
-        {autoDatas.map((card, index) => (
+        {autoDatas.slice(0, 3).map((card, index) => (
           <div
             key={card.id}
             className={`panel ${activeId === card.id ? "active" : ""}`}
@@ -46,143 +45,177 @@ function Home() {
               <h5>DRIVE YOUR DREAM CAR</h5>
               <h2>WANT TO BUY YOUR FAVOURITE CAR</h2>
               <p>YOU'VE COME TO THE RIGHT PLACE TO GET YOUR DREAM CAR</p>
-              <span className="price">4 MILLION NAIRA</span>
-              <Link className="testDrive" to="/contact"><span className="test-drive" >TEST DRIVE</span></Link>
+              <Link className="btn btn-md btn-primary" to="/contact">
+                TEST DRIVE
+              </Link>
             </div>
             <h3>{card.title}</h3>
           </div>
         ))}
       </div>
 
-      <div className="general-vehicle-information d-flex">
-        <div className="Makers">
-          <p>MAKERS OF VEHICLE</p>
-          <div className="All Makes">
-            <Dropdown>
-              <Dropdown.Toggle variant="primary" id="dropdown-basic">
-                All Makes
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item href="#action1">Toyota</Dropdown.Item>
-                <Dropdown.Item href="#action1">Lexus</Dropdown.Item>
-                <Dropdown.Item href="#action1">Honda</Dropdown.Item>
-                <Dropdown.Item href="#action1">Mercedez</Dropdown.Item>
-                <Dropdown.Item href="#action1">BMW</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
+      <div className="latest-offers">
+        <div className="container">
+          <div className="header-section">
+            <h1 className="section-title">Latest Offers</h1>
+            <Link className="btn btn-md btn-primary" to="/listings">
+              View more
+            </Link>
           </div>
-        </div>
-        <div className="Year">
-          <p>YEAR OF VEHICLE</p>
-          <Dropdown>
-            <Dropdown.Toggle variant="primary" id="dropdown-basic">
-              Model
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item href="#action1">2015</Dropdown.Item>
-              <Dropdown.Item href="#action1">2016</Dropdown.Item>
-              <Dropdown.Item href="#action1">2017</Dropdown.Item>
-              <Dropdown.Item href="#action1">2020</Dropdown.Item>
-              <Dropdown.Item href="#action1">2023</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-        </div>
-        <div className="Condition">
-          <p>CONDITION</p>
-          <Dropdown>
-            <Dropdown.Toggle variant="primary" id="dropdown-basic">
-              Vehicle Status
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item href="#action1">Used</Dropdown.Item>
-              <Dropdown.Item href="#action1">New</Dropdown.Item>
-              <Dropdown.Item href="#action1">Tokunbo</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-        </div>
-        <div className="search-button">
-          <button className="btn btn-primary">FIND IT NOW</button>
-        </div>
-      </div>
-      <div className="Latest-offers">
-        <h1 className="section-title">Latest Offers</h1>
 
-        <Container className="new-offers">
-          <Row>
-            {autoDatas.slice(0, 8).map((offer, index) => (
-              <Col key={index} sm={3}>
-                <div className="card">
-                  <div className="card-images">
-                    <img src={offer.src} alt="cards" className="card-img" />
+          <div className="new-offers">
+            <div className="row">
+              {autoDatas.slice(0, 8).map((offer, index) => (
+                <div className="col-md-3" key={index}>
+                  <div className="car-card">
+                    <div className="card-img-box">
+                      <img src={offer.src} alt="cards" className="card-img" />
+                    </div>
+                    <div className="card-body">
+                      <div className="car-details">
+                        <h2 className="car-name">{offer.title}</h2>
+                        <p className="car-price">&#8358; {offer.price} </p>
+                      </div>
+                      <div className="card-btn">
+                        <Link to="/" className="btn btn-md btn-primary">
+                          View details
+                        </Link>
+                      </div>
+                    </div>
                   </div>
-                  <h2 className="card-vehicle-name">{offer.title}</h2>
-                  <p className="card-price">{offer.price}</p>
                 </div>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </div>
-      <div className="Trusted-dealers">
-        <h1>Trusted Dealers</h1>
-        <span className="t-sp1">
-          Find Your Perfect Car with Our Trusted Car Dealers
-        </span>
-        <Container></Container>
-        <div className="agent-list d-flex">
-          <div className="Agents d-flex">
-            <img src={agent1} alt="" />
-            <div className="agent-details">
-              <h5>WpSixer</h5>
-              <span>Member since Nov 24, 2017</span>
-              <p>
-                Become a super contributor by opting in to share non-sensitive
-                plugin data and to receive periodic email updates from us. To
-                protect your site, please review the list and make any changes
-                that might be required.
-              </p>
-              <div className="agent-socials">
-                <i className="fa-brands fa-instagram"></i>
-                <i className="fa-brands fa-facebook-f"></i>
-                <i className="fa-brands fa-whatsapp"></i>
-                <i className="fa-brands fa-twitter"></i>
-              </div>
-            </div>
-          </div>
-          <div className="Agents d-flex">
-            <img src={agent1} alt="" />
-            <div className="agent-details">
-              <h5>WpSixer</h5>
-              <span>Member since Nov 24, 2017</span>
-              <p>
-                Become a super contributor by opting in to share non-sensitive
-                plugin data and to receive periodic email updates from us. To
-                protect your site, please review the list and make any changes
-                that might be required.
-              </p>
-              <div className="agent-socials">
-                <i className="fa-brands fa-instagram"></i>
-                <i className="fa-brands fa-facebook-f"></i>
-                <i className="fa-brands fa-whatsapp"></i>
-                <i className="fa-brands fa-twitter"></i>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
-      <div className="Testimonials">
-        <h1 className="section-title">Clients Testimonials </h1>
-        <span>SATISFIED CLIENTS EVERYWHERE</span>
-        <Carousel fade>
-          {slides.map((slide, index) => (
-            <Carousel.Item key={index}>
-              <div className="Tc-content">
-                <h4>{slide.title}</h4>
-                <p>{slide.text}</p>
+
+      <div className="trusted-dealers">
+        <div className="container">
+          <h1 className="section-title">Trusted Dealers</h1>
+          <p className="section-sub-title">
+            Find Your Perfect Car with Our Trusted Car Dealers
+          </p>
+          <div className="row">
+            <div className="col-md-6">
+              <div className="agent-box">
+                <div className="row">
+                  <div className="col-3">
+                    <div className="agent-img-box">
+                      <img src={agent1} alt="" className="img-fluid" />
+                    </div>
+                  </div>
+
+                  <div className="col-9">
+                    <div className="agent-details">
+                      <h5>Austin Textas</h5>
+
+                      <p>
+                        Become a super contributor by opting in to share
+                        non-sensitive plugin data and to receive periodic email
+                        updates from us. To protect your site, please review the
+                        list and make any changes that might be required.
+                      </p>
+                      <div className="agent-socials">
+                        <ul>
+                          <li>
+                            <a href="https://instagram.com"> </a>
+                            <i className="fa-brands fa-instagram"></i>
+                          </li>
+                          <li>
+                            <a href="https://facebook.com"> </a>
+                            <i className="fa-brands fa-facebook-f"></i>
+                          </li>
+                          <li>
+                            <a href="https://whatsapp.com"> </a>
+                            <i className="fa-brands fa-whatsapp"></i>
+                          </li>
+                          <li>
+                            <a href="https://twitter.com"> </a>
+                            <i className="fa-brands fa-twitter"></i>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
               </div>
-            </Carousel.Item>
-          ))}
-        </Carousel>
+
+            </div>
+
+            <div className="col-md-6">
+              <div className="agent-box">
+                <div className="row">
+                  <div className="col-3">
+                    <div className="agent-img-box">
+                      <img src={agent1} alt="" className="img-fluid" />
+                    </div>
+                  </div>
+
+                  <div className="col-9">
+                    <div className="agent-details">
+                      <h5>Austin Textas</h5>
+
+                      <p>
+                        Become a super contributor by opting in to share
+                        non-sensitive plugin data and to receive periodic email
+                        updates from us. To protect your site, please review the
+                        list and make any changes that might be required.
+                      </p>
+                      <div className="agent-socials">
+                        <ul>
+                          <li>
+                            <a href="https://instagram.com"> </a>
+                            <i className="fa-brands fa-instagram"></i>
+                          </li>
+                          <li>
+                            <a href="https://facebook.com"> </a>
+                            <i className="fa-brands fa-facebook-f"></i>
+                          </li>
+                          <li>
+                            <a href="https://whatsapp.com"> </a>
+                            <i className="fa-brands fa-whatsapp"></i>
+                          </li>
+                          <li>
+                            <a href="https://twitter.com"> </a>
+                            <i className="fa-brands fa-twitter"></i>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div className="testimonials">
+        <div className="container">
+          <h1 className="section-title">Clients Testimonials </h1>
+          <p className="section-sub-title">
+            Satisfied Clients Shares thier Testimony
+          </p>
+          <div className="row justify-content-center">
+            <div className="col-md-6">
+            <Carousel fade>
+            {slides.map((slide, index) => (
+              <Carousel.Item key={index}>
+                <div className="Tc-content">
+                  <h4>{slide.title}</h4>
+                  <p> <i class="fa-solid fa-quote-left"></i> {slide.text} <i class="fa-solid fa-quote-right"></i> </p>
+                </div>
+              </Carousel.Item>
+            ))}
+          </Carousel>
+            </div>
+          </div>
+          
+        </div>
       </div>
       <Footer />
     </div>

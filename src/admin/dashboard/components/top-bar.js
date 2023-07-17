@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./components.css";
-import DefaultUser from "../assets/images/default-user.png";
+import DefaultUser from "../../../assets/agent-demo.jpeg";
+import logo from "../../../assets/logo-icon.png";
 
 const TopBar = () => {
 
@@ -94,15 +95,18 @@ const TopBar = () => {
     return (
         <>
 
-            <div id="top-header" className="top-header"> 
+            <div id="top-header" className="top-header">
                 <div className="navbar-header">
                     <div className="navbar-logo">
                         <div className="hamburger-menu">
                             <button onClick={handleSidebar} className="btn btn-md btn-secondary">  <i className="fa-solid fa-bars"></i> </button>
                         </div>
+
                         <div className="logo-name">
-                            <p className="logo-text">AutoListings Admin </p>
+                            <img src={logo} alt="" className="img-fluid" />
+                            <h2 className="logo-text"> Admin Dashboard </h2>
                         </div>
+
                     </div>
 
                     <div className="navbar-others">
