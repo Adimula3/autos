@@ -1,3 +1,6 @@
+/* baby blue color: #01abaee2;
+twitter blue color one: #1da2f5;
+twitter blue color two: #1d9bf0; */
 .section-title {
   text-align: center;
   font-size: 50px;
@@ -34,8 +37,8 @@
   letter-spacing: 1px;
   border-radius: 5px;
   text-align: center;
-  background: #01abae;
-  border: 1px solid #01abae;
+  background: #1da2f5;
+  border: 1px solid #1da2f5;
 
 }
 
@@ -165,8 +168,8 @@
   text-transform: capitalize;
   padding: 10px 20px;
   border-radius: 25px;
-  background: #01abaee2;
-  border: 1px solid #01abaee2;
+  background: #1d9bf0;
+  border: 1px solid #1d9bf0;
 
   box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.31);
   -webkit-box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.31);
@@ -239,8 +242,8 @@
   letter-spacing: 1px;
   padding: 10px;
   border-radius: 25px;
-  background: #01abaee2;
-  border: 1px solid #01abaee2;
+  background: #1d9bf0;
+  border: 1px solid #1d9bf0;
 }
 
 .car-card:hover {

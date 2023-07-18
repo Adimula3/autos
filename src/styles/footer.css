@@ -7,7 +7,7 @@
 
 .footer .f-g {
     position: relative;
-    background: #01abae;
+    background: #1da2f5;
     width: 70%;
     height: 150px;
     z-index: 1;
@@ -46,8 +46,8 @@
 }
 
 .footer-content .btn {
-    background: #01abae;
-    border: 1px solid #01abae;
+    background: #1d9bf0;
+    border: 1px solid #1d9bf0;
     font-size: 15px;
     text-transform: capitalize;
     letter-spacing: 1px;

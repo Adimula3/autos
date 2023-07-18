@@ -109,14 +109,15 @@
 .top-header .navbar-header .navbar-logo .hamburger-menu .btn {
   margin-right: 30px;
   padding: 8px 12px;
-  color: #000000;
+  color: #dedede;
   background: #191c1f;
   border: 1px solid #383838;
 }
 
 .top-header .navbar-header .navbar-logo .hamburger-menu .btn:hover {
-  background: #dedede;
-  border: 1px solid #dedede;
+  background: #464646;
+  color: #dedede;
+  border: 1px solid #464646;
 }
 
 .top-header .navbar-header .navbar-logo .hamburger-menu .btn .fa-solid {

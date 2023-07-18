@@ -100,7 +100,7 @@ function OldAddProduct(props) {
                           <label
                             for="exampleFormControlInput1"
                             className="form-label"
-                          >
+                          > 
                             Fuel
                           </label>
                           <input
@@ -343,51 +343,7 @@ function OldAddProduct(props) {
                           ></textarea>
                         </div>
                       </Col>
-                      <Col md={12}>
-                        <div className="form-group">
-                          <label
-                            for="exampleFormControlInput1"
-                            className="form-label"
-                          >
-                            Exterior & Interior Features
-                          </label>
-                          <textarea
-                            class="form-control"
-                            id="exampleFormControlTextarea1"
-                            rows="3"
-                          ></textarea>
-                        </div>
-                      </Col>
-                      <Col md={12}>
-                        <div className="form-group">
-                          <label
-                            for="exampleFormControlInput1"
-                            className="form-label"
-                          >
-                            Vehicle Body Features
-                          </label>
-                          <textarea
-                            class="form-control"
-                            id="exampleFormControlTextarea1"
-                            rows="3"
-                          ></textarea>
-                        </div>
-                      </Col>
-                      <Col md={12}>
-                        <div className="form-group">
-                          <label
-                            for="exampleFormControlInput1"
-                            className="form-label"
-                          >
-                            Car Safety Features
-                          </label>
-                          <textarea
-                            class="form-control"
-                            id="exampleFormControlTextarea1"
-                            rows="3"
-                          ></textarea>
-                        </div>
-                      </Col>
+                     
                       <Row>
                         <Col md={12}>
                           <div className="form-group">

@@ -98,7 +98,7 @@ const ProfileSettings = () => {
                           <input type="file"
                             id="upload-cover-photo"
                             accept='image/*'
-                            hidden={true}
+                            hidden={true} 
                             onChange={onChange}
                             className="form-control" />
                         </div>
