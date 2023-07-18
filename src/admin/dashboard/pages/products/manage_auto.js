@@ -42,7 +42,10 @@ const ManageProducts = () => {
                       </div>
                     </div>
 
-                    /* ====================== cut from here ==================== */
+                  
+
+
+                  
                     <div className="manage-autos">
                       <div>
                         <img src={offer1} className="manage-autos-img"></img>
@@ -88,7 +91,9 @@ const ManageProducts = () => {
                         </p>
                       </div>
                     </div>
-                    /* ====================== end cut from here ==================== */
+                   
+
+
                   </div>
 
                   <div className="manage-autos-list d-flex">
@@ -109,7 +114,9 @@ const ManageProducts = () => {
                       </div>
                     </div>
                   </div>
-                  /* ====================== cut from here ==================== */
+
+
+                
                   <div className="manage-autos2 d-flex">
                     <div>
                       <img src={offer1} className="manage-autos-img"></img>
@@ -128,7 +135,9 @@ const ManageProducts = () => {
                     </div>
                   </div>
                   </div>
-                  /* ======================end cut from here ==================== */
+
+
+                
                 </div>
               </div>
             </div>
