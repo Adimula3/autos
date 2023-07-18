@@ -1,0 +1,408 @@
+.dashboard-home {
+    padding-bottom: 50px;
+    background: #191c1f;
+}
+
+.page-views-box .col-md-3 {
+    padding: 5px;
+    margin: 0;
+}
+
+.page-views-box .view-box {
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px 10px;
+}
+
+.view-box .view-metrics {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.view-box .view-metric-icon {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.view-box .view-metric-icon .fa-solid {
+    font-size: 50px;
+}
+
+.page-views-box .view-box .views-number {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.view-box .view-metrics .note {
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.view-box .last-updated {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.view-box .last-updated p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 14px;
+}
+
+.view-box .last-updated .note-one {
+    font-weight: 600;
+}
+
+
+.total-view {
+    background: rgb(254, 149, 104);
+    background: linear-gradient(90deg, rgba(254, 149, 104, 1) 0%, rgba(254, 135, 97, 1) 35%, rgba(254, 179, 145, 1) 100%);
+
+}
+
+.daily-view {
+    background: rgb(10, 195, 131);
+    background: linear-gradient(90deg, rgba(10, 195, 131, 1) 0%, rgba(11, 218, 146, 1) 35%, rgba(13, 237, 159, 1) 100%);
+    width: 100%;
+    border-radius: 8px;
+}
+
+.weekly-view {
+    background: rgb(254, 94, 113);
+    background: linear-gradient(90deg, rgba(254, 94, 113, 1) 0%, rgba(254, 116, 132, 1) 35%, rgba(254, 137, 151, 1) 100%);
+    width: 100%;
+    border-radius: 8px;
+}
+
+.monthly-view {
+    background: rgb(1, 171, 174); 
+    background: linear-gradient(90deg, rgba(1, 171, 174, 1) 0%, rgba(1, 191, 194, 1) 35%, rgba(1, 211, 214, 1) 100%);
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+
+.v-n {
+    padding: 0 0 5px 20px;
+    gap: 40px;
+    border-bottom: 1px solid #fff;
+}
+
+.v-n p {
+    font-size: 15px;
+    padding: 10px 0 0 0;
+}
+
+.v-n .fa-chart-simple {
+    font-size: 30px;
+    color: #fff;
+}
+
+
+
+/* Box 2*/
+
+.home-update-box {
+    margin-top: 70px;
+
+}
+
+.latest-update-box {
+    background: transparent;
+    padding: 30px 20px 20px;
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.4);
+}
+
+.latest-update-box h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #979fa1;
+    margin-bottom: 20px;
+}
+
+.update-msg-box {
+    display: flex;
+    flex-direction: row;
+    padding: 15px 0;
+}
+
+.update-msg-box p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.update-msg-box .date {
+    color: #aaaaaa;
+    font-size: 13px;
+    font-weight: 500;
+    width: 25%;
+}
+
+.update-msg-box .up-msg {
+    color: #979fa1;
+    font-size: 13px;
+    font-weight: 400;
+    width: 73%;
+    font-style: italic;
+}
+
+.update-msg span {
+    color: #979fa1;
+    font-size: 14px;
+}
+
+.dealer-information {
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.4);
+}
+
+.dealer-info-one {
+    background: #01a9ac;
+    padding: 0 25px 0 25px;
+    border-radius: 5px;
+}
+
+.dealer-info-one .fa-pen-to-square {
+    color: #fff;
+    padding: 40px 0 50px 50px;
+
+}
+
+.dealer-info-one p {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.dealer-info-one span {
+    text-align: center;
+    padding-left: 35px;
+    font-size: 14px;
+}
+
+
+.dealer-info-one img {
+    height: 120px;
+    width: 120px;
+    margin: 40px 0;
+    border-radius: 10px;
+}
+
+.dealer-info-one p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.dealer-profile-info {
+    padding: 20px 20px;
+}
+
+.dealer-profile-info .title {
+
+    font-size: 18px;
+    font-weight: 600;
+    color: #979fa1;
+    margin-bottom: 20px;
+}
+
+.dealer-profile-info .dealer-details {
+    margin: 20px 0;
+}
+
+
+.dealer-details p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #aaaaaa;
+    margin-bottom: 8px;
+    padding-bottom: 0;
+
+}
+
+.dealer-details span {
+    color: #979fa1;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.dealer-socials {
+    padding: 0 20px;
+}
+
+
+.dealer-socials ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+}
+
+.dealer-socials ul li {
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+
+.dealer-socials .fa-whatsapp {
+    color: #25D366;
+}
+
+.dealer-socials .fa-instagram {
+    color: #C13584;
+
+}
+
+.dealer-socials .fa-facebook-f {
+    color: #1877F2;
+}
+
+.dealer-socials .fa-twitter {
+    color: #1DA1F2;
+}
+
+
+.box2-dealer-details2 hr {
+    margin-left: 40px;
+    margin-top: 5px;
+    padding: 0;
+}
+
+
+/* Box 3*/
+.most-viewed-box {
+    margin-top: 70px;
+    width: 100%;
+}
+
+.most-viewed-auto {
+    background: transparent;
+    padding: 30px 20px 20px;
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.4);
+}
+
+.most-viewed-auto h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #979fa1;
+}
+
+.most-viewed-box-wrapper {
+    margin-top: 20px;
+}
+
+.most-viewed-auto-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.most-viewed-auto-box .box-img {
+    height: 80px;
+    width: 120px;
+}
+
+.most-viewed-auto-box .auto-model {
+    margin: auto;
+}
+
+.most-viewed-auto-box .auto-model p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #979fa1;
+}
+
+.most-viewed-auto-box .auto-model .views-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.most-viewed-auto-box .box-img img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.mail-messages {
+    background: transparent;
+    border-radius: 10px;
+    padding: 30px 0 40px;
+    width: 100%;
+
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.4);
+}
+
+.mail-messages h4 {
+    padding: 0 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #979fa1;
+}
+
+.mail-messages .notifications {
+    background: #01a9ac;
+    padding: 10px 5px;
+}
+
+.mail-messages .notifications .noti {
+    color: #fff;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 10px;
+}
+
+.mail-messages .notifications .notifi-msg {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+
+}
+
+.mail-messages .mailbox-logo {
+    padding: 50px 0 70px 0;
+    margin: auto;
+    text-align: center;
+}
+
+.mailbox-logo .fa-envelope {
+    font-size: 80px;
+    text-align: center;
+    color: #01a9ac;
+
+}
+
+.mailbox-logo p {
+    color: #979fa1;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+}

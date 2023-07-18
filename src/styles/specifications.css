@@ -1,20 +1,21 @@
-.car-details-table {
-    margin-left: 100px;
+.car-spec {
     margin-top: 30px;
-    border: 5px solid #1c1e22;;
-    width: 750px;
-    justify-content: space-between;
-}
-.car-details-table tr {
-    padding-left: 20px;
+    width: 80%;
 }
 
-.car-details-table .table-cell {
+.car-spec tr {
+    padding-left: 20px;
+    border: 3px solid #111315;
+}
+
+.car-spec .table-cell {
     color: #8d9ba8;
-    font-size: 13px;
-    padding: 20px 0 20px 30px;
-    border-bottom: 5px solid #1c1e22;
-  } 
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 0 10px 20px;
+    border-bottom: 3px solid #111315;
+}
+
 /* Mobile View */
 @media only screen and (max-width: 767px) {
     .car-details-table {
@@ -23,5 +24,4 @@
         width: 375px;
         justify-content: space-between;
     }
-  }
-  
+}

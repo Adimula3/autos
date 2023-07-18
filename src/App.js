@@ -27,7 +27,8 @@ function App() {
           {/* dynamic route for admin dashboard
           sample url for the dashboard home: = http://localhost:3000/admin/dashboard/home */}
           <Route path="/admin/dashboard/:dash_url" element={<AdminDashboard />} />
-
+          <Route path="/admin/dashboard/settings/:settings_url" element={<AdminDashboard />} />
+          <Route path="/admin/dashboard/auto/:product_url" element={<AdminDashboard />} />
 
         </Routes>
       </Router>

@@ -10,7 +10,8 @@
   place-items: center;
   width: 100%;
   height: 100%;
-  background: #191c1f;
+  background: #111315;
+  /* background: #191c1f; */
   opacity: 0;
   transition: opacity 0.5s;
 }
@@ -25,6 +26,7 @@
   display: grid;
   animation: s4 4s infinite;
 }
+
 #home-spinner .custom-loader::before,
 #home-spinner .custom-loader::after {
   content: "";
@@ -35,6 +37,7 @@
   mix-blend-mode: darken;
   animation: s4 1s infinite linear;
 }
+
 #home-spinner .custom-loader::after {
   border-color: #0000 #0000 #e4e4ed #e4e4ed;
   animation-direction: reverse;
@@ -67,8 +70,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: radial-gradient(farthest-side, #3fbf5d 94%, #0000) top/8px 8px
-      no-repeat,
+  background: radial-gradient(farthest-side, #3fbf5d 94%, #0000) top/8px 8px no-repeat,
     conic-gradient(#0000 30%, #3fbf56);
   -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
   animation: s3 1s infinite linear;
@@ -86,7 +88,8 @@
   top: 0;
   padding: 10px 40px;
   font-family: "Lato", sans-serif;
-  background: #24262b;
+  /* background: #24262b; */
+  background: #111315;
   color: #ffffff;
 }
 
@@ -120,29 +123,34 @@
   font-size: 18px;
 }
 
+
+.top-header .navbar-header .navbar-logo .logo-name {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.top-header .navbar-header .navbar-logo .logo-name img {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #8d9ba8;
+  padding: 2px 3px;
+  border-radius: 3px;
+}
+
 .top-header .navbar-header .navbar-logo .logo-name .logo-text {
-  cursor: pointer;
-  font-size: 27px;
-  font-weight: 700;
-  letter-spacing: 1px;
+  position: relative;
+  margin-top: 5px;
+  padding-left: 10px;
+  font-family: "Itim", cursive;
+  font-size: 20px; 
   text-transform: capitalize;
+  font-weight: 700;
+  color: #8d9ba8;
   margin-bottom: 0;
   padding-bottom: 0;
-  font-family: "Itim", cursive;
-  font-weight: bold;
-  background-image: linear-gradient(
-    to right,
-    #777777 0,
-    #e4e4e4 22%,
-    #b5b5b5 45%,
-    #e3e3e3 55%,
-    #c4c4c4 78%,
-    #898989 100%
-  );
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
 }
+
 
 .navbar-others ul {
   list-style: none;
@@ -159,6 +167,7 @@
   margin-right: 10px;
   color: #aaaaaa;
 }
+
 .navbar-others ul li .fa-solid {
   font-size: 18px;
 }
@@ -188,12 +197,13 @@
   overflow-x: hidden;
   overflow-y: auto;
   -ms-overflow-style: none;
-  background: #24262b;
+  background: #111315;
   scrollbar-width: none;
 }
 
 .side-bar::-webkit-scrollbar {
-  display: none; /* for Chrome, Safari, and Opera */
+  display: none;
+  /* for Chrome, Safari, and Opera */
 }
 
 .sidebar-container {
@@ -221,10 +231,12 @@
   border-radius: 25px;
   border: 1px solid #464646;
 }
+
 .sidebar-profile .sidebar-admin .sidebar-admin-info {
   margin-top: 5px;
   margin-left: 15px;
 }
+
 .sidebar-profile .sidebar-admin .sidebar-admin-info p {
   margin-bottom: 0;
   padding-bottom: 0;
@@ -261,6 +273,7 @@
   margin-right: 15px;
   color: #aaaaaa;
 }
+
 .sidebar-mini ul li .fa-solid {
   font-size: 16px;
 }
@@ -280,6 +293,7 @@
 .sidebar-nav nav ul .menu-item.active {
   background: #191c1f;
 }
+
 .sidebar-nav nav ul .menu-item.active .menu-link {
   color: #aaaaaa;
 }
@@ -291,13 +305,16 @@
   letter-spacing: 1px;
   color: #777777;
 }
+
 .sidebar-nav nav ul .menu-item .menu-link .fa-solid {
   font-size: 18px;
 }
+
 .sidebar-nav nav ul .menu-item .menu-link .sidebar-text {
   margin-left: 10px;
   /* display: none; */
 }
+
 
 @media only screen and (max-width: 900px) {
   .top-header {
@@ -342,6 +359,7 @@
     padding: 8px 15px;
     margin-right: 10px;
   }
+
   .navbar-others ul li .fa-solid {
     font-size: 16px;
   }
@@ -389,10 +407,12 @@
     object-fit: cover;
     border-radius: 25px;
   }
+
   .sidebar-profile .sidebar-admin .sidebar-admin-info {
     margin-top: 3px;
     margin-left: 10px;
   }
+
   .sidebar-profile .sidebar-admin .sidebar-admin-info p {
     margin-bottom: 0;
     padding-bottom: 0;
@@ -416,6 +436,7 @@
     padding: 8px 15px;
     margin-right: 10px;
   }
+
   .sidebar-mini ul li .fa-solid {
     font-size: 16px;
   }
@@ -438,9 +459,11 @@
     font-size: 14px;
     letter-spacing: 1px;
   }
+
   .sidebar-nav nav ul .menu-item .menu-link .fa-solid {
     font-size: 18px;
   }
+
   .sidebar-nav nav ul .menu-item .menu-link .sidebar-text {
     margin-left: 10px;
     display: none;
@@ -532,9 +555,11 @@
     font-size: 14px;
     letter-spacing: 1px;
   }
+
   .sidebar-nav nav ul .menu-item .menu-link .fa-solid {
     font-size: 18px;
   }
+
   .sidebar-nav nav ul .menu-item .menu-link .sidebar-text {
     margin-left: 10px;
     display: none;

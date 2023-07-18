@@ -1,10 +1,10 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import "../styles/lightbox.css";
 import "../styles/description.css";
-import { Accordion, AccordionItem } from "react-bootstrap";
 
 function Description({ autoData }) {
   const [activeItem, setActiveItem] = useState(null);
+   // eslint-disable-next-line
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleItemClick = (index) => {
@@ -31,10 +31,12 @@ function Description({ autoData }) {
               </div>
               {activeItem === 0 && (
                 <div className="accordion-body">
-                  Elit sed uao eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua uat enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi aliquip ex ea duis aute
-                  irure dolor in reprehenderit in voluptate.
+                  <p className="accordion-text">
+                    Elit sed uao eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua uat enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi aliquip ex ea duis aute
+                    irure dolor in reprehenderit in voluptate.
+                  </p>
                 </div>
               )}
             </div>
@@ -52,10 +54,12 @@ function Description({ autoData }) {
               </div>
               {activeItem === 1 && (
                 <div className="accordion-body">
-                  Elit sed uao eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua uat enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi aliquip ex ea duis aute
-                  irure dolor in reprehenderit in voluptate.
+                  <p className="accordion-text">
+                    Elit sed uao eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua uat enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi aliquip ex ea duis aute
+                    irure dolor in reprehenderit in voluptate.
+                  </p>
                 </div>
               )}
             </div>
@@ -73,10 +77,12 @@ function Description({ autoData }) {
               </div>
               {activeItem === 2 && (
                 <div className="accordion-body">
-                  Elit sed uao eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua uat enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi aliquip ex ea duis aute
-                  irure dolor in reprehenderit in voluptate.
+                  <p className="accordion-text">
+                    Elit sed uao eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua uat enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi aliquip ex ea duis aute
+                    irure dolor in reprehenderit in voluptate.
+                  </p>
                 </div>
               )}
             </div>

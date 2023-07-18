@@ -5,7 +5,7 @@ import DashSpinner from "../../components/dash-spinner";
 import { useState } from "react";
 import "../addProduct/addProduct.css";
 
-function AddProduct(props) {
+function OldAddProduct(props) {
   // eslint-disable-next-line
   const [loading, setLoading] = useState(false);
 
@@ -449,4 +449,4 @@ function AddProduct(props) {
   );
 }
 
-export default AddProduct;
+export default OldAddProduct;
