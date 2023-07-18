@@ -90,11 +90,11 @@
 }
 
 .auth-form .form-group .btn {
-  font-size: 16px;
+  font-size: 15px;
   text-transform: capitalize;
   font-weight: 600;
-  letter-spacing: 1px;
-  background: #050A30;;
+  letter-spacing: 0.5px;
+  background: #1d9bf0;
   margin-top: 20px;
   padding: 12px 50px;
   text-align: center;

@@ -4,7 +4,6 @@
 }
 
 .dealer-form {
-
     border-radius: 20px;
     padding: 25px 30px;
 
@@ -45,7 +44,7 @@
 .dealer-form .form-group input:focus {
     outline: none;
     box-shadow: none;
-    border: 1px solid #01abae;
+    border: 1px solid #1d9bf0;
 }
 
 
@@ -62,7 +61,7 @@
 .dealer-form .form-group textarea:focus {
     outline: none;
     box-shadow: none;
-    border: 1px solid #01abae;
+    border: 1px solid #1d9bf0;
 }
 
 
@@ -117,8 +116,8 @@
 
 .dealer-form .form-group .btn {
     margin-top: 20px;
-    border: 1px solid #01abaee2;
-    background: #01abaee2;
+    border: 1px solid #1d9bf0;
+    background: #1d9bf0;
     padding: 10px 50px;
     font-size: 15px;
     font-weight: 600;
@@ -290,17 +289,12 @@
     font-weight: 600;
 }
 
-
-
-
 .container-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 30px;
 }
-
-
 
 .container-header p {
     font-size: 18px;
@@ -335,4 +329,68 @@
     color: #979fa1;
     border: 0px solid #111315;
     background: #111315;
+}
+
+
+.manage-auto-header .container-header p {
+    font-size: 22px;
+
+}
+
+
+
+.manage-auto-header .form-group {
+    margin: 30px 0;
+}
+
+.manage-auto-header .form-group .form-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #979fa1;
+    margin-bottom: 8px;
+}
+
+.manage-auto-header .form-group input {
+    background: transparent;
+    border: 1px solid #979fa1;
+    height: 47px;
+    font-size: 14px;
+    color: #f7f7f7;
+    border-radius: 5px;
+}
+
+.manage-auto-header .form-group input:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #1d9bf0;
+}
+
+
+
+.manage-auto-header .sort-autos .dropdown .dropdown-toggle {
+    background: transparent;
+    border: 1px solid #8d9ba8;
+    padding: 8px 40px;
+    height: 47px;
+    color: #8d9ba8;
+    font-size: 15px;
+    font-weight: 600;
+    width: 100%;
+
+}
+
+.manage-auto-header .sort-autos .dropdown .dropdown-menu {
+    background: #1c1e22;
+    border: 1px solid #8d9ba83d;
+
+}
+
+.manage-auto-header .sort-autos .dropdown .dropdown-menu .dropdown-item {
+    color: #8d9ba8;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.manage-auto-header .sort-autos .dropdown .dropdown-menu .dropdown-item:hover {
+    background: #101010;
 }

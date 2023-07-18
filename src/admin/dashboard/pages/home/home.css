@@ -80,8 +80,8 @@
 }
 
 .monthly-view {
-    background: rgb(1, 171, 174); 
-    background: linear-gradient(90deg, rgba(1, 171, 174, 1) 0%, rgba(1, 191, 194, 1) 35%, rgba(1, 211, 214, 1) 100%);
+    background: rgb(29, 162, 245); 
+    background: linear-gradient(90deg, rgba(29, 162, 245, 1) 0%, rgb(40, 171, 252) 35%, rgb(78, 184, 250) 100%);
     width: 100%;
     border-radius: 8px;
 }
@@ -173,7 +173,7 @@
 }
 
 .dealer-info-one {
-    background: #01a9ac;
+    background: #1da2f5;
     padding: 0 25px 0 25px;
     border-radius: 5px;
 }
@@ -363,7 +363,7 @@
 }
 
 .mail-messages .notifications {
-    background: #01a9ac;
+    background: #1da2f5;
     padding: 10px 5px;
 }
 
@@ -395,7 +395,7 @@
 .mailbox-logo .fa-envelope {
     font-size: 80px;
     text-align: center;
-    color: #01a9ac;
+    color: #1da2f5;
 
 }
 

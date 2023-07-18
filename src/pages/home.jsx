@@ -77,7 +77,7 @@ function Home() {
                         <p className="car-price">&#8358; {offer.price} </p>
                       </div>
                       <div className="card-btn">
-                        <Link to="/" className="btn btn-md btn-primary">
+                        <Link to={`/productDetails/${offer.id}`} className="btn btn-md btn-primary">
                           View details
                         </Link>
                       </div>

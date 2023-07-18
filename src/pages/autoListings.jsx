@@ -107,7 +107,7 @@ function AutoListings() {
                         </Dropdown.Item>
                         <Dropdown.Item onClick={() => setDisplayCount(7)}>
                           7
-                        </Dropdown.Item>
+                        </Dropdown.Item> 
                         <Dropdown.Item
                           onClick={() => setDisplayCount(autoDatas.length)}
                         >
@@ -321,7 +321,7 @@ function AutoListings() {
                         />
                       </div>
 
-                      <div className="auto-car-details">
+                      <div className="auto-car-details"> 
                         <Link className="link" to={`/productDetails/${listing.id}`}>
                           <h3 className="auto-name">{listing.title}</h3>
                         </Link>
