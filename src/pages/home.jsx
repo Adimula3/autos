@@ -100,13 +100,13 @@ function Home() {
             <div className="col-md-6">
               <div className="agent-box">
                 <div className="row">
-                  <div className="col-3">
+                  <div className="col-4">
                     <div className="agent-img-box">
                       <img src={agent1} alt="" className="img-fluid" />
                     </div>
                   </div>
 
-                  <div className="col-9">
+                  <div className="col-8">
                     <div className="agent-details">
                       <h5>Austin Textas</h5>
 
@@ -147,13 +147,13 @@ function Home() {
             <div className="col-md-6">
               <div className="agent-box">
                 <div className="row">
-                  <div className="col-3">
+                  <div className="col-4">
                     <div className="agent-img-box">
                       <img src={agent1} alt="" className="img-fluid" />
                     </div>
                   </div>
 
-                  <div className="col-9">
+                  <div className="col-8">
                     <div className="agent-details">
                       <h5>Austin Textas</h5>
 

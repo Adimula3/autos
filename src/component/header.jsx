@@ -123,7 +123,7 @@ function Header() {
 
         <nav className="navbar navbar-expand-lg">
           <div className="container-fluid">
-            <div className="h-n d-flex">
+            <div className="h-n">
               <div>
                 <Link className="nav-brand" to="/">
                   MOFARDSON-AUTOS

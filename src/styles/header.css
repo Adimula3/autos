@@ -208,8 +208,13 @@ blue three: #000080; */
   }
 
   .navbar-toggler {
-    margin-left: 65px;
     border: 2px solid #8d9ba8;
+  }
+  .h-n {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between!important;
+    gap: 75px;
   }
 
   .navbar-toggler:active {
@@ -251,7 +256,7 @@ blue three: #000080; */
   .header .nav-brand {
     color: #8d9ba8;
     display: block;
-    font-size: 25px;
+    font-size: 18px;
     text-decoration: none;
   }
 }

@@ -436,10 +436,11 @@ twitter blue color two: #1d9bf0; */
   .panel .hero-style-right,
   .panel .hero-style-left {
     visibility: hidden;
-    margin-top: 400px;
+    margin-top: 300px;
     position: absolute;
-    left: 35px;
-    width: 350px;
+    left: 0;
+    margin-left: 15px;
+    width: 257px;
   }
 
   .panel h3 {
@@ -453,8 +454,10 @@ twitter blue color two: #1d9bf0; */
 
   .hero-style-right h5,
   .hero-style-left h5 {
-    font-size: 17px;
-    margin-bottom: 100px;
+    font-size: 16px;
+    margin-bottom: 0;
+    padding-left: 0;
+    margin-left: 0;
   }
 
   .hero-style-right h2,
@@ -470,14 +473,11 @@ twitter blue color two: #1d9bf0; */
     display: none;
   }
 
-  .hero-style-left .price,
-  .hero-style-right .price {
-    padding: 15px;
-  }
-
-  .hero-style-left .test-drive,
-  .hero-style-right .test-drive {
-    padding: 15px;
+ 
+  .hero-style-right .btn,
+  .hero-style-left .btn {
+    font-size: 13px;
+    margin-top: 20px;
   }
 
   .panel.panel.active .hero-style-left,
@@ -485,42 +485,23 @@ twitter blue color two: #1d9bf0; */
     visibility: visible;
   }
 
-  /*.....General-vehicle-information............*/
-  .general-vehicle-information {
-    margin: 0 50px 0 0;
-    padding: 30px 0 70px 20px;
-    display: flex;
-    flex-direction: column;
-    width: 390px;
-  }
-
-  .general-vehicle-information p {
-    margin-top: 10px;
-    font-size: 12px;
-  }
-
-  .general-vehicle-information .dropdown .dropdown-toggle {
-    width: 345px;
-    text-align: left;
-    font-size: 12px;
-  }
-
-  .general-vehicle-information .dropdown-menu {
-    width: 345px;
-  }
-
-  .general-vehicle-information .search-button .btn {
-    padding: 8px 35px 8px 35px;
-    width: 345px;
-  }
-
+ 
   /*.....latest-offers............*/
 
   .latest-offers {
     padding: 10px 0 0 2px;
   }
-
-  .new-offers {}
+  .latest-offers .header-section .section-title {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .latest-offers .header-section .btn {
+    font-size: 14px;
+    
+  }
+  
 
   .card-images {
     width: 100%;
