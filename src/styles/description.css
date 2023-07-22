@@ -45,15 +45,13 @@
     margin-top: auto;
     cursor: pointer;
     color: #8d9ba8;
+    margin-right: 15px;
 }
 
 
 /* Mobile View */
 @media only screen and (max-width: 767px) {
-    .description {
-        padding: 30px 0 0 10px;
-        width: 375px;
-    }
+   
     .description .accordion-header {
         padding:15px 0 15px 15px;
         font-size: 15px;
