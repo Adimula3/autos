@@ -121,7 +121,7 @@ function Header() {
           </div>
         </div>
 
-        <nav className="navbar navbar-expand-lg">
+        <nav className="navbar">
           <div className="container-fluid">
             <div className="h-n">
               <div>
@@ -131,11 +131,8 @@ function Header() {
               </div>
               <div>
                 <button
-                  className="navbar-toggler"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarNav"
-                  aria-controls="navbarNav"
+                className="header-btn"
+                 
                   aria-expanded={isMenuOpen ? "true" : "false"}
                   aria-label="Toggle navigation"
                   onClick={toggleMenu}

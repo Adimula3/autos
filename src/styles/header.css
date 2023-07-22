@@ -209,22 +209,31 @@ blue three: #000080; */
 
   .navbar-toggler {
     border: 2px solid #8d9ba8;
+    margin-left: 75px;
+    height: 40px!important;
   }
   .h-n {
     display: flex;
     flex-direction: row;
     justify-content: space-between!important;
-    gap: 75px;
   }
 
   .navbar-toggler:active {
     border: 2px solid #8d9ba8 !important;
   }
-
-  .fa-bars,
+.header-btn {
+  background: transparent!important;
+  border: none;
+}
+  .fa-bars{
+    font-size: 30px;
+    color: #8d9ba8;
+  }
+  
   .fa-x {
     font-size: 30px;
     color: #8d9ba8;
+  
   }
 
   @keyframes appear {
