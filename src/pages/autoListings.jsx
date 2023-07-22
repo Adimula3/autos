@@ -90,7 +90,6 @@ function AutoListings() {
           <div className="auto-listings-section">
             <div className="row">
               <div className="col-md-12">
-
                 <div className="autos-sort">
                   <div className="show-on-page d-flex">
                     <p>SHOW ON PAGE</p>

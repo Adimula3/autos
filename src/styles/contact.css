@@ -181,60 +181,10 @@
     display: flex;
     flex-direction: column;
   }
-
-  .c-details h3 {
-    font-weight: 300;
-  }
-
-  .c-details {
-    margin-left: 10px;
-  }
-
-  .c-details-2 {
+  .contact-info {
     margin-top: 30px;
-    gap: 30px;
-    display: flex;
-    flex-direction: column;
   }
-
-  .c-details-2 h5 {
-    font-size: 15px;
-    color: #8d9ba8;
+  .contact-follow {
+    visibility: hidden;
   }
-
-  .c-details-2 {
-    margin-top: 30px;
-    gap: 30px;
-  }
-
-  .c-details-content {
-    width: 300px;
-  }
-
-  .form {
-    width: 360px !important;
-  }
-
-  .contacts .form-control {
-    height: 75px;
-  }
-
-  .mail-img {
-    display: none;
-  }
-
-  .c-f p { 
-    font-weight: 400;
-  }
-
-  .c-details-content span {
-    font-size: 15;
-    font-weight: 300;
-  }
-
-  .c-change {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
 }
