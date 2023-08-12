@@ -176,3 +176,8 @@ blue three: #000080; */
 }
 
 /* Mobile View */
+@media only screen and (max-width: 767px) {
+  .header {
+    display: none;
+  }
+}
