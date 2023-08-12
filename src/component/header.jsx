@@ -54,7 +54,7 @@ function Header() {
             <div className="col-md-5">
               <p className="welcome">Welcome to MOFARDSON-AUTOS</p>
             </div>
- 
+
             <div className="col-md-4">
               <div className="header-socials">
                 <ul>
@@ -99,75 +99,55 @@ function Header() {
             </div>
 
             <div className="col-md-6">
-
               <div className="header-details">
                 <div className="h-infos">
-                  <h4> <i class="fa-solid fa-building-circle-check"></i>  Office</h4>
+                  <h4>
+                    {" "}
+                    <i class="fa-solid fa-building-circle-check"></i> Office
+                  </h4>
                   <span>20 Bill Street, Apapa</span>
                 </div>
 
                 <div className="h-infos">
-                  <h4> <i class="fa-solid fa-business-time"></i> Working</h4>
+                  <h4>
+                    {" "}
+                    <i class="fa-solid fa-business-time"></i> Working
+                  </h4>
                   <span>Service Available 24/7</span>
                 </div>
 
                 <div className="h-infos">
-                  <h4> <i class="fa-solid fa-envelope-circle-check"></i> Email Us</h4>
+                  <h4>
+                    {" "}
+                    <i class="fa-solid fa-envelope-circle-check"></i> Email Us
+                  </h4>
                   <span>info@example.com</span>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
 
-        <nav className="navbar">
-          <div className="container-fluid">
-            <div className="h-n">
-              <div>
-                <Link className="nav-brand" to="/">
-                  MOFARDSON-AUTOS
-                </Link>
-              </div>
-              <div>
-                <button
-                className="header-btn"
-                 
-                  aria-expanded={isMenuOpen ? "true" : "false"}
-                  aria-label="Toggle navigation"
-                  onClick={toggleMenu}
-                >
-                  {isMenuOpen ? (
-                    <i class="fa-solid fa-x"></i>
-                  ) : (
-                    <i className="fa-solid fa-bars "></i>
-                  )}
-                </button>
-                <div
-                  className={`collapse navbar-collapse ${
-                    isMenuOpen ? "show" : ""
-                  }`}
-                  id="navbarNav"
-                >
-                  <ul className="navbar-nav">
-                    <li className="nav-item">
-                      <Link className="nav-link " to="/" aria-current="page">
-                        HOME
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link className="nav-link" to="/listings">
-                        AUTO LISTINGS
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link className="nav-link" to="/contact">
-                        CONTACT US
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li className="nav-item">
+                  <Link className="nav-link " to="/" aria-current="page">
+                    HOME
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/listings">
+                    AUTO LISTINGS
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/contact">
+                    CONTACT US
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
         </nav>

@@ -146,16 +146,15 @@ blue three: #000080; */
   margin-right: 10px;
 }
 
-
-
-
 .header .navbar {
   padding: 10px 50px;
   background: #0c0e0f;
+ 
 }
 
 .header .navbar .navbar-nav {
   gap: 50px;
+  padding-left: 50px;
 }
 
 .header .navbar .nav-link {
@@ -177,95 +176,3 @@ blue three: #000080; */
 }
 
 /* Mobile View */
-@media only screen and (max-width: 767px) {
-  .header {
-    position: relative;
-  }
-
-  .hedaer-contact {
-    display: none !important;
-  }
-
-  .header-info {
-    display: none !important;
-  }
-
-  .navbar-nav {
-    position: absolute;
-    background-color: #07030a;
-    width: 80%;
-    top: 0;
-    left: 0;
-    z-index: 5;
-    justify-content: center;
-    align-items: flex-start;
-    padding-left: 50px;
-    gap: 40px !important;
-    height: 100vh;
-    transition: 0.6s;
-    opacity: 0.95;
-    animation: appear 0.35s backwards;
-  }
-
-  .navbar-toggler {
-    border: 2px solid #8d9ba8;
-    margin-left: 75px;
-    height: 40px!important;
-  }
-  .h-n {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between!important;
-  }
-
-  .navbar-toggler:active {
-    border: 2px solid #8d9ba8 !important;
-  }
-.header-btn {
-  background: transparent!important;
-  border: none;
-}
-  .fa-bars{
-    font-size: 30px;
-    color: #8d9ba8;
-  }
-  
-  .fa-x {
-    font-size: 30px;
-    color: #8d9ba8;
-  
-  }
-
-  @keyframes appear {
-    0% {
-      opacity: 0;
-      translate: -30px 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
-
-  .nav-link {
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-  }
-
-  .mobile-logo {
-    height: 30px;
-    width: 50px;
-  }
-
-  .header .navbar {
-    padding-left: 0;
-  }
-
-  .header .nav-brand {
-    color: #8d9ba8;
-    display: block;
-    font-size: 18px;
-    text-decoration: none;
-  }
-}
